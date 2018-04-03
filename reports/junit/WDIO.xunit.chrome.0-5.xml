@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="api_test_suite" timestamp="2018-03-21T14:56:40" time="0.041" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="c300409a165935f54551540667116584"/>
+      <property name="suiteName" value="API Test Suite"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./test/spec/api/firsttest.api.js"/>
+    </properties>
+    <testcase classname="chrome.api_test_suite" name="a_test_an_api_call" time="0.036">
+      <system-out>
+        <![CDATA[
+COMMAND: DELETE http://127.0.0.1:4444/wd/hub/session/14683b5119ebc41fed8f376bdc381ff3 - {}
+RESULT: {"sessionId":"14683b5119ebc41fed8f376bdc381ff3","status":0,"value":null}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

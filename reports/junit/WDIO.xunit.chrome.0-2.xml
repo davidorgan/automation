@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="page_load_suite" timestamp="2018-03-21T14:54:55" time="77.087" tests="26" failures="0" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="d8921c37b67c78198636eeffc150ffcc"/>
+      <property name="suiteName" value="Page Load Suite"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./test/spec/PageLoad.js"/>
+    </properties>
+    <testcase classname="chrome.page_load_suite" name="a_qcue_home_loads" time="5.379">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/login.do"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"name","value":"j_username"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.41201762744380455-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"name","value":"j_username"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.41201762744380455-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"name","value":"j_password"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.41201762744380455-2"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"name","value":"j_password"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.41201762744380455-2"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-2/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":".submitButton"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.41201762744380455-3"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":".submitButton"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.41201762744380455-3"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-3/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Login"}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"name","value":"j_username"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.41201762744380455-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-1/clear - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-1/value - {"value":["d","o","r","g","a","n","@","e","x","a","(8 more items)"],"text":"dorgan@example.com"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"name","value":"j_password"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.41201762744380455-2"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-2/clear - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-2/value - {"value":["Z","i","m","m","e","r","!","!","0","4"],"text":"Zimmer!!04"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":".submitButton"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.41201762744380455-3"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41201762744380455-3/click - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":""}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"xpath","value":"//*[@id=\"mapPage\"]/div[2]/div[3]/div[2]/ul/li[2]/div[1]/table/thead/tr/th[1]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.10259973127472621-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"xpath","value":"//*[@id=\"mapPage\"]/div[2]/div[3]/div[2]/ul/li[2]/div[1]/table/thead/tr/th[1]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.10259973127472621-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.10259973127472621-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Home"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="b_qcue_setup_events_loads" time="3.322">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/events"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"events.events\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.08212173913509302-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"events.events\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.08212173913509302-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.08212173913509302-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Setup - Events"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="c_qcue_setup_strategies_page_loads" time="2.637">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/strategies"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"schedules.schedules\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.9175295780979185-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"schedules.schedules\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.9175295780979185-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.9175295780979185-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Setup - Strategies"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="d_qcue_setup_users_page_loads" time="2.409">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/users"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"users.users\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.6164222943281445-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"users.users\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.6164222943281445-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.6164222943281445-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Setup - Users"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="e_qcue_setup_zones_page_loads" time="2.707">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/zones"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"zones.venueMap\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.3456015491887219-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"zones.venueMap\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.3456015491887219-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.3456015491887219-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Setup - Zones"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="f_qcue_reporting_dashboard_page_loads" time="2.388">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/dashboard"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":".app-page-nav"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.1833188626869624-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":".app-page-nav"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.1833188626869624-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.1833188626869624-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Reporting - Dashboard"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="g_qcue_reporting_history_page_loads" time="2.118">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/history"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"history.history\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.884624358768139-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"history.history\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.884624358768139-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.884624358768139-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Reporting - History"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="h_qcue_reporting_reports_page_loads" time="3.051">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/reports"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"reports.reports\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.6320127365896366-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"reports.reports\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.6320127365896366-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.6320127365896366-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Reporting - Reports"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="i_qcue_admin_api_page_loads" time="2.351">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/api"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"api.api\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.3520426933423473-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"api.api\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.3520426933423473-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.3520426933423473-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - API"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="j_qcue_admin_data_page_loads" time="2.118">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/data"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"data.dataFiles\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.4053238705827005-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"data.dataFiles\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.4053238705827005-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.4053238705827005-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Data"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="l_qcue_admin_global_events_page_loads" time="2.531">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/globalEvents"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"globalEvents.quickFilter\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.3087775088468441-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"globalEvents.quickFilter\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.3087775088468441-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.3087775088468441-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Global Events"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="m_qcue_admin_jobs_page_loads" time="12.348">
+      <error message="element (&quot;[translate=&quot;venues.venues&quot;]&quot;) still not visible after 5000ms"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/jobs"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"venues.venues\"]"}
+RESULT: {"message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[translate=\"venues.venues\"]\"}","type":"RuntimeError","seleniumStack":{"type":"NoSuchElement","message":"An element could not be located on the page using the given search parameters.","orgStatusMessage":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[translate=\"venues.venues\"]\"}\n  (Session info: chrome=65.0.3325.162)\n  (Driver info: chromedriver=2.36.540469 (1881fd7f8641508feb5166b7cae561d87723cfa8),platform=Mac OS X 10.12.6 x86_64)"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"venues.venues\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/screenshot - {}
+RESULT: null
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+Error: element ("[translate="venues.venues"]") still not visible after 5000ms
+    at elements("[translate="venues.venues"]") - isVisible.js:54:17
+    at isVisible("[translate="venues.venues"]") - waitForVisible.js:73:22
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="n_qcue_admin_metrics_page_loads" time="1.985">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/metrics"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"metrics.type\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.5618914391221588-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"metrics.type\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.5618914391221588-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.5618914391221588-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Metrics"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="o_qcue_admin_options_page_loads" time="2.074">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/options"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"options.pricing\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.5379656921483447-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"options.pricing\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.5379656921483447-1"},{"ELEMENT":"0.5379656921483447-2"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.5379656921483447-1/displayed - {}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.5379656921483447-2/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":false}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Options"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="p_qcue_admin_performers_page_loads" time="2.009">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/performers"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"performers.performers\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.03586264209385104-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"performers.performers\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.03586264209385104-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.03586264209385104-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Performers"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="q_qcue_admin_permissions_page_loads" time="2.145">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/permissions"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"permissions.permissions\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.39402735385329146-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"permissions.permissions\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.39402735385329146-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.39402735385329146-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Permissions"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="r_qcue_admin_pos_accounts_page_loads" time="3.095">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/posCredentials"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"pos.title\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.9751484504777401-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"pos.title\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.9751484504777401-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.9751484504777401-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - POS Credentials"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="s_qcue_admin_recent_changes_page_loads" time="1.887">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/changelog"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"xpath","value":"/html/body/div[3]/div/div/h3"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.9358895285552968-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"xpath","value":"/html/body/div[3]/div/div/h3"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.9358895285552968-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.9358895285552968-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"xpath","value":"/html/body/div[3]/div/div/h3"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.9358895285552968-1"}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.9358895285552968-1/text - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Recent Changes"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="t_qcue_admin_organizations_page_loads" time="2.215">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/resellers"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"resellers.screen.RESELLERS\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.7711826036082323-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"resellers.screen.RESELLERS\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.7711826036082323-1"},{"ELEMENT":"0.7711826036082323-2"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.7711826036082323-1/displayed - {}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.7711826036082323-2/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Organizations"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="u_qcue_admin_symmetry_page_loads" time="1.797">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/symmetry"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"symmetry.title\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.664703722994169-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"symmetry.title\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.664703722994169-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.664703722994169-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Symmetry"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="v_qcue_admin_tags_page_loads" time="2.861">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/tags"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"tags.tagTypes\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.3940714253838915-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"tags.tagTypes\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.3940714253838915-1"},{"ELEMENT":"0.3940714253838915-2"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.3940714253838915-1/displayed - {}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.3940714253838915-2/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Tags"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="w_qcue_admin_venue_configurations_page_loads" time="2.352">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/venueConfigurations"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"venueConfigurations.venueConfigurations\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.4214454577337605-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"venueConfigurations.venueConfigurations\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.4214454577337605-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.4214454577337605-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Venue Configurations"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="x_qcue_admin_venues_page_loads" time="2.299">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/venues"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"venues.venues\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.27777130846409825-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"venues.venues\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.27777130846409825-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.27777130846409825-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Venues"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="y_qcue_admin_venue_maps_page_loads" time="1.932">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/admin/venueMaps"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element - {"using":"css selector","value":"[translate=\"venueMaps.tags\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":{"ELEMENT":"0.41547654314383187-1"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/elements - {"using":"css selector","value":"[translate=\"venueMaps.tags\"]"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":[{"ELEMENT":"0.41547654314383187-1"}]}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/element/0.41547654314383187-1/displayed - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":true}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Admin - Venue Maps"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="z_qcue_my_account_page_loads" time="3.49">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/myAccount"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - My Account"}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="chrome.page_load_suite" name="za_qcue_notifications_page_loads" time="3.216">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/url - {"url":"http://branch.vpc.qcue.com/resale/ui/notifications"}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d/title - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":"Qcue - Notifications"}
+COMMAND: DELETE http://127.0.0.1:4444/wd/hub/session/c0ae2387d6c5e6fa89a04aa5bd84961d - {}
+RESULT: {"sessionId":"c0ae2387d6c5e6fa89a04aa5bd84961d","status":0,"value":null}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

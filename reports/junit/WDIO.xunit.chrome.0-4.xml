@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="qat_40_review_pane_submit_checked_prices" timestamp="2018-03-21T14:56:38" time="0.545" tests="1" failures="0" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="8759f619960f5d4d33d5e4f65bd1245a"/>
+      <property name="suiteName" value="QAT-40 - Review pane - Submit checked prices"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./test/spec/QAT-40_ReviewPane_SubmitPrices.js"/>
+    </properties>
+    <testcase classname="chrome.qat_40_review_pane_submit_checked_prices" name="qat_40_review_pane_submit_checked_prices" time="0.007">
+      <error message="test1 is not defined"/>
+      <system-out>
+        <![CDATA[
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/8b57dccafd5d288f3a4fdb0974674dea/screenshot - {}
+RESULT: null
+COMMAND: DELETE http://127.0.0.1:4444/wd/hub/session/8b57dccafd5d288f3a4fdb0974674dea - {}
+RESULT: {"sessionId":"8b57dccafd5d288f3a4fdb0974674dea","status":0,"value":null}
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+ReferenceError: test1 is not defined
+    at Context.test (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/QAT-40_ReviewPane_SubmitPrices.js:30:48)
+    at new Promise (<anonymous>)
+    at new F (/Users/davidorgan/Automation/Webdriverio/resale-auto/node_modules/core-js/library/modules/_export.js:35:28)
+]]>
+      </system-err>
+    </testcase>
+  </testsuite>
+</testsuites>

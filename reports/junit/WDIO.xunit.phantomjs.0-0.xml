@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="login_test_suite" timestamp="2017-11-14T11:33:31" time="3.211" tests="2" failures="0" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="5cc27098f951f9e1f48ba43274848575"/>
+      <property name="suiteName" value="Login Test Suite"/>
+      <property name="capabilities" value="phantomjs"/>
+      <property name="file" value="./test/spec/Login.js"/>
+    </properties>
+    <testcase classname="phantomjs.login_test_suite" name="a_login_to_resale_succesfully" time="3.014">
+      <error message="Cannot read property 'waitForVisible' of undefined"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/edffe270-c961-11e7-812f-931801f20ac7/url - {"url":"https://dev-resale.vpc.qcue.com/"}
+RESULT: {"sessionId":"edffe270-c961-11e7-812f-931801f20ac7","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/edffe270-c961-11e7-812f-931801f20ac7/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+TypeError: Cannot read property 'waitForVisible' of undefined
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/Login.js:23:30)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.login_test_suite" name="b_logout_of_resale_succesfully" time="0">
+      <system-out>
+        <![CDATA[
+COMMAND: DELETE http://127.0.0.1:4444/wd/hub/session/edffe270-c961-11e7-812f-931801f20ac7 - {}
+RESULT: {"sessionId":"edffe270-c961-11e7-812f-931801f20ac7","status":0,"value":{}}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

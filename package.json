@@ -1,0 +1,35 @@
+{
+  "name": "resale-auto",
+  "version": "1.0.0",
+  "description": "Automation test framework for Resale",
+  "main": "wdio.conf.js",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "chai-webdriverio": "^0.4.3",
+    "wdio-junit-reporter": "^0.3.1",
+    "wdio-mocha-framework": "^0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "^4.9.8"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "gulp-wdio": "^1.0.8",
+    "selenium-standalone": "^6.13.0",
+    "wdio-junit-reporter": "^0.3.1",
+    "wdio-mocha-framework": "^0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "^4.9.8"
+  },
+  "scripts": {
+    "test": "wdio wdio.conf.js",
+    "testSuite-pageLoad": "./node_modules/.bin/wdio wdio.conf.js --suite pageLoad",
+    "testSuite-login": "./node_modules/.bin/wdio wdio.conf.js --suite login",
+    "testSuite-api": "./node_modules/.bin/wdio wdio.conf.js --suite api",
+    "testSuite-priceChanges": "./node_modules/.bin/wdio wdio.conf.js --suite priceChanges",
+    "testSuite-priceChangesReject": "./node_modules/.bin/wdio wdio.conf.js --suite priceChangesReject",
+    "testSuite-switchEvents": "./node_modules/.bin/wdio wdio.conf.js --suite switchEvents"
+  },
+  "author": "",
+  "license": "ISC"
+}

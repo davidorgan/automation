@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="page_load_suite" timestamp="2017-11-14T11:33:37" time="55.315" tests="22" failures="0" errors="22" skipped="0">
+    <properties>
+      <property name="specId" value="d8921c37b67c78198636eeffc150ffcc"/>
+      <property name="suiteName" value="Page Load Suite"/>
+      <property name="capabilities" value="phantomjs"/>
+      <property name="file" value="./test/spec/PageLoad.js"/>
+    </properties>
+    <testcase classname="phantomjs.page_load_suite" name="a_qcue_home_loads" time="2.57">
+      <error message="Cannot read property 'waitForVisible' of undefined"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+TypeError: Cannot read property 'waitForVisible' of undefined
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:15:30)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_setup_events_loads" time="2.24">
+      <error message="'Login' == 'Qcue - Setup - Events'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/events"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Setup - Events'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:38:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_setup_strategies_page_loads" time="2.246">
+      <error message="'Login' == 'Qcue - Setup - Strategies'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/strategies"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Setup - Strategies'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:44:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_setup_users_page_loads" time="2.229">
+      <error message="'Login' == 'Qcue - Setup - Users'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/users"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Setup - Users'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:50:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_setup_zones_page_loads" time="2.335">
+      <error message="'Login' == 'Qcue - Setup - Zones'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/zones"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Setup - Zones'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:56:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_reporting_dashboard_page_loads" time="2.452">
+      <error message="'Login' == 'Qcue - Reporting - Dashboard'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/dashboard"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Reporting - Dashboard'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:62:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_reporting_history_page_loads" time="2.353">
+      <error message="'Login' == 'Qcue - Reporting - History'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/history"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Reporting - History'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:68:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_reporting_reports_page_loads" time="2.252">
+      <error message="'Login' == 'Qcue - Reporting - Reports'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/reports"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Reporting - Reports'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:74:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_data_page_loads" time="2.135">
+      <error message="'Login' == 'Qcue - Admin - Data'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/data"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Data'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:80:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_event_types_page_loads" time="2.239">
+      <error message="'Login' == 'Qcue - Admin - Event Types'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/eventTypes"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Event Types'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:86:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_metrics_page_loads" time="2.346">
+      <error message="'Login' == 'Qcue - Admin - Metrics'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/metrics"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Metrics'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:92:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_performers_page_loads" time="2.433">
+      <error message="'Login' == 'Qcue - Admin - Performers'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/performers"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Performers'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:98:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_jobs_page_loads" time="2.536">
+      <error message="'Login' == 'Qcue - Admin - Jobs'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/jobs"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Jobs'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:104:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_options_page_loads" time="2.261">
+      <error message="'Login' == 'Qcue - Admin - Options'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/options"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Options'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:110:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_permissions_page_loads" time="2.745">
+      <error message="'Login' == 'Qcue - Admin - Permissions'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/permissions"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Permissions'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:116:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_organizations_page_loads" time="2.36">
+      <error message="'Login' == 'Qcue - Admin - Organizations'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/resellers"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Organizations'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:122:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_tags_page_loads" time="2.835">
+      <error message="'Login' == 'Qcue - Admin - Tags'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/tags"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Tags'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:128:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_venues_page_loads" time="2.437">
+      <error message="'Login' == 'Qcue - Admin - Venues'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/venues"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Venues'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:134:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_venue_configurations_page_loads" time="2.248">
+      <error message="'Login' == 'Qcue - Admin - Venue Configurations'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/venueConfigurations"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Venue Configurations'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:140:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_admin_venue_maps_page_loads" time="2.249">
+      <error message="'Login' == 'Qcue - Admin - Venue Maps'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/venueMaps"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Admin - Venue Maps'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:146:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_my_account_page_loads" time="2.254">
+      <error message="'Login' == 'Qcue - My Account'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/myAccount"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - My Account'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:152:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+    <testcase classname="phantomjs.page_load_suite" name="qcue_notifications_page_loads" time="2.541">
+      <error message="'Login' == 'Qcue - Notifications'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/url - {"url":"https://dev-resale.vpc.qcue.com/resale/ui/notifications"}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/title - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":"Login"}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0/screenshot - {}
+RESULT: null
+COMMAND: DELETE http://127.0.0.1:4444/wd/hub/session/f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0 - {}
+RESULT: {"sessionId":"f1d8d6e0-c961-11e7-9f16-6b4fc51fc9a0","status":0,"value":{}}
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError [ERR_ASSERTION]: 'Login' == 'Qcue - Notifications'
+    at Context.<anonymous> (/Users/davidorgan/Automation/Webdriverio/resale-auto/test/spec/PageLoad.js:158:12)
+    at new Promise (<anonymous>)
+]]>
+      </system-err>
+    </testcase>
+  </testsuite>
+</testsuites>
