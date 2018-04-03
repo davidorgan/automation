@@ -37,6 +37,6 @@ ehthumbs.db
 Thumbs.db
 
 #Paths#
-/node_modules
-/screenshots
-/reports
+node_modules/
+screenshots/
+reports/
