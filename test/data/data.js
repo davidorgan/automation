@@ -1,4 +1,3 @@
-function Data () {
-}
+function Data() {}
 
-module.exports = new Data()
+module.exports = new Data();

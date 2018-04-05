@@ -1,31 +1,38 @@
 // login.page.js
-var Page = require('./page')
+var Page = require("./page");
 
-const assert = require('assert');
-var chai = require('chai')
-  , expect = chai.expect
-  , should = chai.should();
+const assert = require("assert");
+var chai = require("chai"),
+  expect = chai.expect,
+  should = chai.should();
 
-const HomePage = require('../pageobjects/home.page');
-const userData = require('../data/user.data');
+const HomePage = require("../pageobjects/home.page");
+const userData = require("../data/user.data");
 
 var StrategiesPage = Object.create(Page, {
-    /**
-     * define elements
-     */
-    strategyTitle_Span: { get: function () { return browser.element('[translate="schedules.schedules"]'); } },
+  /**
+   * define elements
+   */
+  strategyTitle_Span: {
+    get: function() {
+      return browser.element('[translate="schedules.schedules"]');
+    }
+  },
 
+  /**
+   * define or overwrite page methods
+   */
+  open: {
+    value: function() {
+      Page.open.call(this, "/resale/ui/strategies");
+    }
+  },
 
-    /**
-     * define or overwrite page methods
-     */
-    open: { value: function() {
-        Page.open.call(this, '/resale/ui/strategies');
-    } },
-
-    submit: { value: function() {
-        this.form.submitForm();
-    } },
+  submit: {
+    value: function() {
+      this.form.submitForm();
+    }
+  }
 });
 
 module.exports = StrategiesPage;
