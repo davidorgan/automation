@@ -74,6 +74,7 @@ var EventListPage = Object.create(Page, {
     currentEvent_Container: {get: function () { return browser.element('.mapPageEvent'); } },
     currentEvent_TitleArea_Span: {get: function () { return this.currentEvent_Container.element('.eventTitleArea');  } },
     currentEventLeftArrow_Li: { get: function () { return this.currentEvent_Container.element('.fa-caret-left');  } },
+    currentEventRightArrow_Li: { get: function () { return this.currentEvent_Container.element('.fa-caret-right');  } },
 
     eventDropdown_Container: {get: function () { return browser.element('.eventsSelectionDropDown'); } },
     eachEventTitleArea_Span: {get: function () { return this.eventDropdown_Container.elements('.eventTitleArea');  } },
