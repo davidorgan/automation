@@ -62,6 +62,9 @@ exports.config = {
         switchEvents:[
             './test/spec/QAT-405_Switch between Events.js'
         ],
+        sortListings:[
+            './test/spec/QAT-408_Event listings can be sorted.js'
+        ],
       //  otherFeature: [
             // ...
       //  ]
