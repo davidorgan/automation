@@ -10,7 +10,7 @@ var chai = require("chai"),
 chai.use(require("chai-sorted"));
 const LoginPage = require("../pageobjects/login.page");
 const HomePage = require("../pageobjects/home.page");
-const EventListPage = require("../pageobjects/eventList.page");
+const EventListingsTable = require('../pageobjects/eventListingsTable') 
 const userData = require("../data/user.data");
 
 var testSuiteName;
@@ -47,23 +47,23 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     // Second click displays listing descending order. //
     // ------------------------------------------------------------------ //
     browser.logger.info("Click Sec to Sort by section...");
-    HomePage.goToReseller("Qcue"); //Function to go to named reseller
+    HomePage.goToReseller("PrimeSport"); //Function to go to named reseller
 
     HomePage.findEventValidListings();
     //Wait until listings load
-    HomePage.listingHasReseller_Row.waitForVisible(extendedWait);
-    HomePage.listingSwatch_Container.waitForVisible(extendedWait);
-    HomePage.listingSwatch_Container.click(); //Click to put reseller listings at top
+    EventListingsTable.listingHasReseller_Row.waitForVisible(extendedWait);
+    EventListingsTable.listingSwatch_Container.waitForVisible(extendedWait);
+    EventListingsTable.listingSwatch_Container.click(); //Click to put reseller listings at top
 
     //Check expected table headers are present to sort by
-    expect(HomePage.listingsTableSectionHeader_Th.getText()).to.eql("Sec");
-    expect(HomePage.listingsTableRowHeader_Th.getText()).to.eql("Row");
-    expect(HomePage.listingsTableQtyHeader_Th.getText()).to.eql("Qty");
-    expect(HomePage.listingsTableCostHeader_Th.getText()).to.eql("Cost");
-    expect(HomePage.listingsTablePriceHeader_Th.getText()).to.eql("Price");
-    expect(HomePage.listingsTablePriceChangeHeader_Th.getText()).to.eql("Change");
-    expect(HomePage.listingsTableROIHeader_Th.getText()).to.eql("ROI");
-    expect(HomePage.listingsTableAgeHeader_Th.getText()).to.eql("Age");
+    expect(EventListingsTable.listingsTableSectionHeader_Th.getText()).to.eql("Sec");
+    expect(EventListingsTable.listingsTableRowHeader_Th.getText()).to.eql("Row");
+    expect(EventListingsTable.listingsTableQtyHeader_Th.getText()).to.eql("Qty");
+    expect(EventListingsTable.listingsTableCostHeader_Th.getText()).to.eql("Cost");
+    expect(EventListingsTable.listingsTablePriceHeader_Th.getText()).to.eql("Price");
+    expect(EventListingsTable.listingsTablePriceChangeHeader_Th.getText()).to.eql("Change");
+    expect(EventListingsTable.listingsTableROIHeader_Th.getText()).to.eql("ROI");
+    expect(EventListingsTable.listingsTableAgeHeader_Th.getText()).to.eql("Age");
 
     //Click Sec to sort by sections in ascending order
     HomePage.listingsTableSectionHeader_Th.click();

@@ -9,7 +9,7 @@ var chai = require("chai"),
   should = chai.should();
 const LoginPage = require("../pageobjects/login.page");
 const HomePage = require("../pageobjects/home.page");
-const EventListPage = require("../pageobjects/eventList.page");
+const EventListPage = require("../pageobjects/eventListDropdown");
 const userData = require("../data/user.data");
 
 var testSuiteName;

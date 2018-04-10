@@ -250,21 +250,6 @@ var HomePage = Object.create(Page, {
       return this.reviewPaneListings_Table.elements(".//tbody/tr");
     }
   },
-  //Relative Paths ref
-  // /html/body/div[1]/div/div[3]/div[1] - Event 1 Container
-  // /html/body/div[1]/div/div[3]/div[1]/div[1] - Event 1 Header Container
-  // /html/body/div[1]/div/div[3]/div[1]/div[1]/div - Event 1 Header Checkbox Container
-  // /html/body/div[1]/div/div[3]/div[1]/div[1]/div/input - Event 1 Header Checkbox Input
-  // /html/body/div[1]/div/div[3]/div[1]/div[1]/span - Event 1 Header Span (Event Date/Name/Qty text)
-
-  // /html/body/div[1]/div/div[3]/div[1]/div[1]/span
-  // /html/body/div[1]/div/div[3]/div[1]/div[1]/i[2] - Event 1 Header Caret (Collapse)
-  // /html/body/div[1]/div/div[3]/div[1]/div/i[1] - Event 1 Header Caret (Expand)
-
-  // /html/body/div[1]/div/div[3]/div[1]/div[2] - Event 1 Listings Container
-
-  // /html/body/div[1]/div/div[3]/div[2] - Event 2 Container
-
   //Test Page Objects
   QcueReseller_Link: {
     get: function() {
@@ -550,6 +535,7 @@ var HomePage = Object.create(Page, {
         var listingsRowElements = HomePage.listingHasReseller_Row;
         listingsRowElements.value.forEach(listing => {
           var string = listing.element(path).getText();
+          //Clean up values for easier sorting/comparing
           if(string.charAt(0)=='$') {
             string = string.substring(1);
           }
