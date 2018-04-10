@@ -35,7 +35,7 @@ suite((testSuiteName = "QAT-405_Switch between Events"), () => {
     // Event List dropdown displays showing all events for that Reseller. //
     // ------------------------------------------------------------------ //
     browser.logger.info("Click Event List Dropdown on Home page...");
-    HomePage.goToReseller("PrimeSport"); //Function to go to named reseller
+    HomePage.goToReseller("Qcue"); //Function to go to named reseller
 
     //Wait until listings load
     HomePage.listingHasReseller_Row.waitForVisible(extendedWait);
@@ -72,18 +72,13 @@ suite((testSuiteName = "QAT-405_Switch between Events"), () => {
     console.log("All events text");
     console.log(allVisibleEventsText);
 
-    EventListPage.eachEventTitleArea_Span.value[
-      randomEventRowNum
-    ].waitForVisible(extendedWait);
+    EventListPage.eachEventTitleArea_Span.value[randomEventRowNum].waitForVisible(extendedWait);
     EventListPage.eachEventTitleArea_Span.value[randomEventRowNum].click();
 
     browser.pause(2000);
 
     //Wait for eventlistings dropdown to no longer be visible
-    EventListPage.eventDropdown_Container.waitForVisible(
-      HomePage.defaultWait,
-      true
-    );
+    EventListPage.eventDropdown_Container.waitForVisible(HomePage.defaultWait, true);
     //Wait until listings load
     HomePage.listingHasReseller_Row.waitForVisible(extendedWait);
     var currentEventTitle = EventListPage.currentEvent_TitleArea_Span.getText();

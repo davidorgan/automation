@@ -81,6 +81,60 @@ var HomePage = Object.create(Page, {
     }
   },
 
+  //Listings Table
+  listingsTableHeader_Tr: {
+    get: function() {
+      return browser.element(".homePageListingsHeader");
+    }
+  },
+  listingsTableSectionHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderSection");
+    }
+  },
+  //homePageListingHeaderRow
+  listingsTableRowHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderRow");
+    }
+  },
+  //homePageListingHeaderQuantity
+  listingsTableQtyHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderQuantity");
+    }
+  },
+  //homePageListingHeaderCost
+  listingsTableCostHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderCost");
+    }
+  },
+  //homePageListingHeaderPrice //price
+  listingsTablePriceHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderPrice");
+    }
+  },
+  //homePageListingHeaderChange
+  listingsTablePriceChangeHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderChange");
+    }
+  },
+  //homePageListingHeaderMargin //roi
+  listingsTableROIHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderMargin");
+    }
+  },
+  //homePageListingHeaderStale //age
+  listingsTableAgeHeader_Th: {
+    get: function() {
+      return this.listingsTableHeader_Tr.element(".homePageListingHeaderStale");
+    }
+  },
+
   //Event info header area
   mapPageEvent_Div: {
     get: function() {
@@ -488,6 +542,25 @@ var HomePage = Object.create(Page, {
       return allListings;
     }
   },
+
+    //Click to sort by row and return sorted values in array -- send path as param for each column header
+    getRowValues: {
+      value: function(path) {
+        var currentListingRows = [];
+        var listingsRowElements = HomePage.listingHasReseller_Row;
+        listingsRowElements.value.forEach(listing => {
+          var string = listing.element(path).getText();
+          if(string.charAt(0)=='$') {
+            string = string.substring(1);
+          }
+          if(string.charAt(string.length-1)=='%') {
+            string = string.slice(0, -1);
+          }
+          currentListingRows.push(string);
+        });
+        return currentListingRows;
+      }
+    },
 
   //Expand all events in review pane
   expandAllEventsReviewPane: {
