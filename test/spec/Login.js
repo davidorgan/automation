@@ -1,15 +1,9 @@
 "use strict";
 const assert = require("assert");
 const should = require("chai");
-const LoginPage = require("../pageobjects/login.page");
+const LoginPage = require("../pageobjects/loginPage");
 const HomePage = require("../pageobjects/home.page");
 const userData = require("../data/user.data");
-
-// import { assert } from 'chai';
-//
-// import HomePage from '../pageobjects/home.page';
-// import LoginPage from '../pageobjects/login.page';
-// import userData from '../data/user.data';
 
 var testSuiteName;
 var test1;

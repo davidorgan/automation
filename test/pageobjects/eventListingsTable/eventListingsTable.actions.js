@@ -40,6 +40,19 @@ var eventListings = {
 
 var EventListingsTableActions = Object.create(Page, {
 
+  //Wait for spinner then wait until it disappears
+  // **-- WORK IN PROGRESS -- DON'T USE! --** //
+  waitForSpinner: {
+    value: function() {
+      //Wait for spinner
+      //ListingsTablePage.spinnyWaity_Span.waitForVisible(10000);
+      ListingsTablePage.spinnyWaity_Span.waitForExist(10000);
+      //Wait for spinner to no longer be visible
+      //ListingsTablePage.spinnyWaity_Span.waitForVisible(10000, true);
+      ListingsTablePage.spinnyWaity_Span.waitForExist(10000, true);
+    }
+  },
+
   //Get listing info for all active listings in current event
   getEventListingsInfo: {
     value: function() {

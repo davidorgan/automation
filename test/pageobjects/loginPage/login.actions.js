@@ -29,7 +29,7 @@ var LoginActions = Object.create(Page, {
   //Goes to base url and logs in to resale
   login: {
     value: function() {
-      LoginPage.open();
+      this.open();
       LoginPage.username_Input.waitForVisible(HomePage.defaultWait);
       LoginPage.password_Input.waitForVisible(HomePage.defaultWait);
       LoginPage.submit_Button.waitForVisible(HomePage.defaultWait);

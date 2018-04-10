@@ -8,9 +8,16 @@ var chai = require("chai"),
   expect = chai.expect,
   should = chai.should();
 chai.use(require("chai-sorted"));
-const LoginPage = require("../pageobjects/login.page");
+
+const Login = require("../pageobjects/loginPage"),
+  LoginActions = Login.LoginActions,
+  LoginPage = Login.LoginPage;
+
 const HomePage = require("../pageobjects/home.page");
-const EventListingsTable = require('../pageobjects/eventListingsTable') 
+const EventListingsTable = require('../pageobjects/eventListingsTable'),
+  EventListingsTableActions = EventListingsTable.EventListingsTableActions,
+  EventListingsTablePage = EventListingsTable.EventListingsTablePage;
+
 const userData = require("../data/user.data");
 
 var testSuiteName;
@@ -36,7 +43,7 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     // -------------------------------- //
 
     browser.logger.info("QAT-408_Event listings can be sorted");
-    LoginPage.login(); //Goes to base url and logs in to resale
+    LoginActions.login(); //Goes to base url and logs in to resale
     browser.logger.info("Step 1 - Login to Resale: PASSED");
 
     // ------------------------------------------------------- //
@@ -48,31 +55,34 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     // ------------------------------------------------------------------ //
     browser.logger.info("Click Sec to Sort by section...");
     HomePage.goToReseller("PrimeSport"); //Function to go to named reseller
-
+    
+    //Wait for page load before switching events
+    HomePage.listingHasReseller_Row.waitForVisible(extendedWait);
     HomePage.findEventValidListings();
+    
     //Wait until listings load
-    EventListingsTable.listingHasReseller_Row.waitForVisible(extendedWait);
-    EventListingsTable.listingSwatch_Container.waitForVisible(extendedWait);
-    EventListingsTable.listingSwatch_Container.click(); //Click to put reseller listings at top
+    HomePage.listingHasReseller_Row.waitForVisible(extendedWait);
+    EventListingsTable.EventListingsTablePage.listingSwatch_Container.waitForVisible(extendedWait);
+    EventListingsTable.EventListingsTablePage.listingSwatch_Container.click(); //Click to put reseller listings at top
 
     //Check expected table headers are present to sort by
-    expect(EventListingsTable.listingsTableSectionHeader_Th.getText()).to.eql("Sec");
-    expect(EventListingsTable.listingsTableRowHeader_Th.getText()).to.eql("Row");
-    expect(EventListingsTable.listingsTableQtyHeader_Th.getText()).to.eql("Qty");
-    expect(EventListingsTable.listingsTableCostHeader_Th.getText()).to.eql("Cost");
-    expect(EventListingsTable.listingsTablePriceHeader_Th.getText()).to.eql("Price");
-    expect(EventListingsTable.listingsTablePriceChangeHeader_Th.getText()).to.eql("Change");
-    expect(EventListingsTable.listingsTableROIHeader_Th.getText()).to.eql("ROI");
-    expect(EventListingsTable.listingsTableAgeHeader_Th.getText()).to.eql("Age");
+    expect(EventListingsTablePage.listingsTableSectionHeader_Th.getText()).to.eql("Sec");
+    expect(EventListingsTablePage.listingsTableRowHeader_Th.getText()).to.eql("Row");
+    expect(EventListingsTablePage.listingsTableQtyHeader_Th.getText()).to.eql("Qty");
+    expect(EventListingsTablePage.listingsTableCostHeader_Th.getText()).to.eql("Cost");
+    expect(EventListingsTablePage.listingsTablePriceHeader_Th.getText()).to.eql("Price");
+    expect(EventListingsTablePage.listingsTablePriceChangeHeader_Th.getText()).to.eql("Change");
+    expect(EventListingsTablePage.listingsTableROIHeader_Th.getText()).to.eql("ROI");
+    expect(EventListingsTablePage.listingsTableAgeHeader_Th.getText()).to.eql("Age");
 
     //Click Sec to sort by sections in ascending order
-    HomePage.listingsTableSectionHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(secPath);
+    EventListingsTablePage.listingsTableSectionHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(secPath);
     expect(currentListingSections).to.be.sorted();   
 
     //Click again to sort by descending order
-    HomePage.listingsTableSectionHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(secPath);
+    EventListingsTablePage.listingsTableSectionHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(secPath);
     expect(currentListingSections).to.be.sorted({descending: true});
 
     browser.logger.info("Click Sec to Sort by section: PASSED");
@@ -86,7 +96,7 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     // ----------------------------------------------------------------------------------- //
     browser.logger.info("Click Row to Sort by row...");
 
-    var currentListingRows = HomePage.getRowValues(rowPath);
+    var currentListingRows = EventListingsTableActions.getRowValues(rowPath);
 
     //Sort existing values to consider string length (asc)
     currentListingRows.sort(function(a, b) {
@@ -94,8 +104,8 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     });
 
     //Click Sec to sort by sections in ascending order
-    HomePage.listingsTableRowHeader_Th.click();
-    var sortAscListingRows = HomePage.getRowValues(rowPath);
+    EventListingsTablePage.listingsTableRowHeader_Th.click();
+    var sortAscListingRows = EventListingsTableActions.getRowValues(rowPath);
     expect(sortAscListingRows).to.be.eql(currentListingRows);
 
     //Sort existing values to consider string length (desc)
@@ -104,8 +114,8 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     });
 
     //Click again to sort by descending order
-    HomePage.listingsTableRowHeader_Th.click();
-    var sortDescListingRows = HomePage.getRowValues(rowPath);
+    EventListingsTablePage.listingsTableRowHeader_Th.click();
+    var sortDescListingRows = EventListingsTableActions.getRowValues(rowPath);
     expect(sortDescListingRows).to.be.eql(newCurrentRows);
 
     browser.logger.info("Click Row to Sort by row: PASSED");
@@ -120,13 +130,13 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     browser.logger.info("Click Qty to Sort by quantity......");
 
     //Click Qty to sort by quantity in ascending order
-    HomePage.listingsTableQtyHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(qtyPath);
+    EventListingsTablePage.listingsTableQtyHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(qtyPath);
     expect(currentListingSections).to.be.sorted();
 
     //Click again to sort by descending order
-    HomePage.listingsTableQtyHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(qtyPath);
+    EventListingsTablePage.listingsTableQtyHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(qtyPath);
     expect(currentListingSections).to.be.sorted({descending: true});
 
     browser.logger.info("Click Qty to Sort by quantity: PASSED");
@@ -140,13 +150,13 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     browser.logger.info("Click Cost to Sort by cost......");
 
     //Click Qty to sort by quantity in ascending order
-    HomePage.listingsTableCostHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(costPath);
+    EventListingsTablePage.listingsTableCostHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(costPath);
     expect(currentListingSections).to.be.sorted();
 
     //Click again to sort by descending order
-    HomePage.listingsTableCostHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(costPath);
+    EventListingsTablePage.listingsTableCostHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(costPath);
     expect(currentListingSections).to.be.sorted({descending: true});
 
     browser.logger.info("Click Cost to Sort by cost: PASSED");
@@ -156,13 +166,13 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     browser.logger.info("Click Price to Sort by price......");
 
     //Click Qty to sort by quantity in ascending order
-    HomePage.listingsTablePriceHeader_Th.click();    
-    var currentListingSections = HomePage.getRowValues(pricePath);   
+    EventListingsTablePage.listingsTablePriceHeader_Th.click();    
+    var currentListingSections = EventListingsTableActions.getRowValues(pricePath);   
     expect(currentListingSections).to.be.sorted();
 
     //Click again to sort by descending order
-    HomePage.listingsTablePriceHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(pricePath);
+    EventListingsTablePage.listingsTablePriceHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(pricePath);
     expect(currentListingSections).to.be.sorted({descending: true});
 
     browser.logger.info("Click Price to Sort by price: PASSED");
@@ -171,13 +181,13 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     browser.logger.info("Click Change to Sort by price change......");
 
     //Click Change to sort by price change % in ascending order
-    HomePage.listingsTablePriceChangeHeader_Th.click();  
-    var currentListingSections = HomePage.getRowValues(changePath);   
+    EventListingsTablePage.listingsTablePriceChangeHeader_Th.click();  
+    var currentListingSections = EventListingsTableActions.getRowValues(changePath);   
     expect(currentListingSections).to.be.sorted();
 
     //Click again to sort by descending order
-    HomePage.listingsTablePriceChangeHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(changePath);
+    EventListingsTablePage.listingsTablePriceChangeHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(changePath);
     expect(currentListingSections).to.be.sorted({descending: true});
 
     browser.logger.info("Click Change to Sort by price change: PASSED");
@@ -185,19 +195,19 @@ suite((testSuiteName = "QAT-408_Event listings can be sorted"), () => {
     //
     browser.logger.info("Click ROI to Sort by ROI......");
 
-    var currentListings = HomePage.getRowValues(roiPath); 
+    var currentListings = EventListingsTableActions.getRowValues(roiPath); 
     var listingsAsc = currentListings.sort(function(a, b){return a - b});
 
     //Click Change to sort by price change % in ascending order
-    HomePage.listingsTableROIHeader_Th.click();  
-    var currentListingSections = HomePage.getRowValues(roiPath);   
+    EventListingsTablePage.listingsTableROIHeader_Th.click();  
+    var currentListingSections = EventListingsTableActions.getRowValues(roiPath);   
     expect(currentListingSections).to.be.eql(listingsAsc);
 
     var listingsDesc = currentListings.sort(function(a, b){return b - a});
 
     //Click again to sort by descending order
-    HomePage.listingsTableROIHeader_Th.click();
-    var currentListingSections = HomePage.getRowValues(roiPath);
+    EventListingsTablePage.listingsTableROIHeader_Th.click();
+    var currentListingSections = EventListingsTableActions.getRowValues(roiPath);
     expect(currentListingSections).to.be.eql(listingsDesc);
 
     browser.logger.info("Click ROI to Sort by ROI: PASSED");

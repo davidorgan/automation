@@ -24,69 +24,96 @@ var EventListingsTablePage = Object.create(Page, {
   /**
    * define elements
    */
-  listingSwatch_Container: { get: function() { return browser.element('//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[1]/table/thead/tr/th[1]'); }},
 
   //Listings Table
+
+  //Listings Table Header
   listingsTableHeader_Tr: {
     get: function() {
       return browser.element(".homePageListingsHeader");
     }
   },
-  listingsTableSectionHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(
-        ".homePageListingHeaderSection"
-      );
-    }
-  },
-  //homePageListingHeaderRow
-  listingsTableRowHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderRow");
-    }
-  },
-  //homePageListingHeaderQuantity
-  listingsTableQtyHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(
-        ".homePageListingHeaderQuantity"
-      );
-    }
-  },
-  //homePageListingHeaderCost
-  listingsTableCostHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderCost");
-    }
-  },
-  //homePageListingHeaderPrice //price
-  listingsTablePriceHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderPrice");
-    }
-  },
-  //homePageListingHeaderChange
-  listingsTablePriceChangeHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(
-        ".homePageListingHeaderChange"
-      );
-    }
-  },
-  //homePageListingHeaderMargin //roi
-  listingsTableROIHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(
-        ".homePageListingHeaderMargin"
-      );
-    }
-  },
-  //homePageListingHeaderStale //age
-  listingsTableAgeHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderStale");
-    }
-  },
+  // Elements inside listingsTableHeader_Tr //
+      spinnyWaity_Span: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(
+            ".spinner"
+          );
+        }
+      },
+      listingSwatch_Container: { 
+        get: function() { 
+          return this.listingsTableHeader_Tr.element(
+            ".homePageListingHeaderSwatch"
+          );
+        }
+      },
+
+      //homePageListingHeaderShared
+      listingsTableSharedHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(
+            ".homePageListingHeaderShared"
+          );
+        }
+      },
+      listingsTableSectionHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(
+            ".homePageListingHeaderSection"
+          );
+        }
+      },
+      //homePageListingHeaderRow
+      listingsTableRowHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(".homePageListingHeaderRow");
+        }
+      },
+      //homePageListingHeaderQuantity
+      listingsTableQtyHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(
+            ".homePageListingHeaderQuantity"
+          );
+        }
+      },
+      //homePageListingHeaderCost
+      listingsTableCostHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(".homePageListingHeaderCost");
+        }
+      },
+      //homePageListingHeaderPrice //price
+      listingsTablePriceHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(".homePageListingHeaderPrice");
+        }
+      },
+      //homePageListingHeaderChange
+      listingsTablePriceChangeHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(
+            ".homePageListingHeaderChange"
+          );
+        }
+      },
+      //homePageListingHeaderMargin //roi
+      listingsTableROIHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(
+            ".homePageListingHeaderMargin"
+          );
+        }
+      },
+      //homePageListingHeaderStale //age
+      listingsTableAgeHeader_Th: {
+        get: function() {
+          return this.listingsTableHeader_Tr.element(".homePageListingHeaderStale");
+        }
+      },
+  // ENDOF --> Elements inside listingsTableHeader_Tr //
+
   firstListingEditPrice_Span: {
     get: function() {
       return browser.element(

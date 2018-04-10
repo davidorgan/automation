@@ -8,7 +8,7 @@ var chai = require("chai"),
   should = chai.should();
 
 const userData = require("../data/user.data");
-const LoginPage = require("../pageobjects/login.page");
+const LoginPage = require("../pageobjects/loginPage");
 
 var newPrice;
 var currentPrice;

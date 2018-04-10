@@ -1,5 +1,5 @@
 const assert = require('assert')
-const LoginPage = require('./test/pageobjects/login.page');
+const LoginPage = require('./test/pageobjects/loginPage');
 const userData = require('./test/data/user.data');
 const HomePage = require('./test/pageobjects/home.page');
 
