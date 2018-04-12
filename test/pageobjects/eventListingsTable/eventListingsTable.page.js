@@ -48,7 +48,12 @@ var EventListingsTablePage = Object.create(Page, {
           );
         }
       },
-
+      //.filter
+      listingsTableHeaderFilter_Span: {
+        get: function() {
+          return browser.element(".filter");
+        }
+      },
       //homePageListingHeaderShared
       listingsTableSharedHeader_Th: {
         get: function() {
@@ -113,6 +118,40 @@ var EventListingsTablePage = Object.create(Page, {
         }
       },
   // ENDOF --> Elements inside listingsTableHeader_Tr //
+
+  //Listings Table:
+  //.homePageListingsList
+  listingsTable_Div: {
+    get: function() {
+      return browser.element(".homePageListingsList");
+    }
+  },
+  // Elements inside listingsTable_Div //
+    //All shared listings column elements
+    listingsTableSharedCol_Span: {
+      get: function() {
+        return this.listingsTable_Div.elements('[ng-if="listing.shared"]');
+      }
+    },
+    //All unshared listings column elements
+    listingsTableUnSharedCol_Span: {
+      get: function() {
+        return this.listingsTable_Div.elements('[ng-if="!listing.shared"]');
+      }
+    },
+    //All rows for listings that belong to reseller
+    listingHasReseller_Row: {
+      get: function() {
+        return this.listingsTable_Div.elements('[iscurrentreseller="true"]');
+      }
+    },
+    //All rows for listings that do not belong to reseller
+    listingNotReseller_Row: {
+      get: function() {
+        return this.listingsTable_Div.elements('[iscurrentreseller="false"]');
+      }
+    },
+  // ENDOF --> Elements inside listingsTable_Div //
 
   firstListingEditPrice_Span: {
     get: function() {

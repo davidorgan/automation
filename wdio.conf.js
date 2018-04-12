@@ -65,6 +65,9 @@ exports.config = {
         sortListings:[
             './test/spec/QAT-408_Event listings can be sorted.js'
         ],
+        toggleSharedListings:[
+            './test/spec/QAT-409_Events listings can be shared unshared.js'
+        ],
       //  otherFeature: [
             // ...
       //  ]

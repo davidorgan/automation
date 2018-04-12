@@ -30,7 +30,8 @@
     "testSuite-priceChanges": "./node_modules/.bin/wdio wdio.conf.js --suite priceChanges",
     "testSuite-priceChangesReject": "./node_modules/.bin/wdio wdio.conf.js --suite priceChangesReject",
     "testSuite-switchEvents": "./node_modules/.bin/wdio wdio.conf.js --suite switchEvents",
-    "testSuite-sortListings": "./node_modules/.bin/wdio wdio.conf.js --suite sortListings"
+    "testSuite-sortListings": "./node_modules/.bin/wdio wdio.conf.js --suite sortListings",
+    "testSuite-sharedListings": "./node_modules/.bin/wdio wdio.conf.js --suite toggleSharedListings"
   },
   "author": "",
   "license": "ISC"

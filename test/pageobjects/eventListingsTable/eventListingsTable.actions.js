@@ -38,6 +38,8 @@ var eventListings = {
   }
 };
 
+var extendedWait = 5000;
+
 var EventListingsTableActions = Object.create(Page, {
 
   //Wait for spinner then wait until it disappears
@@ -152,6 +154,21 @@ var EventListingsTableActions = Object.create(Page, {
       priceChangesObj.newPriceRes = newPrice;
 
       return priceChangesObj;
+    }
+  },
+  findEventWithSharedListings: {
+    value: function() {
+      ListingsTablePage.listingsTable_Div.waitForVisible(extendedWait);
+      ListingsTablePage.listingHasReseller_Row.waitForVisible(extendedWait);
+      console.log(ListingsTablePage.listingsTableSharedCol_Span.value.length);
+      
+      if(ListingsTablePage.listingsTableSharedCol_Span.value.length > 0)
+      {
+          return;
+      }
+      HomePage.nextEvent_Button.waitForVisible(this.defaultWait);
+      HomePage.nextEvent_Button.click();
+      this.findEventWithSharedListings();     
     }
   },
 
