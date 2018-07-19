@@ -13,11 +13,7 @@ var StrategiesPage = Object.create(Page, {
   /**
    * define elements
    */
-  strategyTitle_Span: {
-    get: function() {
-      return browser.element('[translate="schedules.schedules"]');
-    }
-  },
+  strategyTitle_Span: { get: function() { return browser.element('[translate="schedules.schedules"]'); } },
 
   /**
    * define or overwrite page methods
@@ -25,12 +21,6 @@ var StrategiesPage = Object.create(Page, {
   open: {
     value: function() {
       Page.open.call(this, "/resale/ui/strategies");
-    }
-  },
-
-  submit: {
-    value: function() {
-      this.form.submitForm();
     }
   }
 });

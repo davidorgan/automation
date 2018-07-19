@@ -13,11 +13,7 @@ var EventsPage = Object.create(Page, {
   /**
    * define elements
    */
-  eventTitle_Span: {
-    get: function() {
-      return browser.element('[translate="events.events"]');
-    }
-  },
+  eventTitle_Span: { get: function() { return browser.element('[translate="events.events"]'); } },
 
   /**
    * define or overwrite page methods
@@ -25,12 +21,6 @@ var EventsPage = Object.create(Page, {
   open: {
     value: function() {
       Page.open.call(this, "/resale/ui/events");
-    }
-  },
-
-  submit: {
-    value: function() {
-      this.form.submitForm();
     }
   }
 });

@@ -13,11 +13,7 @@ var TempPage = Object.create(Page, {
   /**
    * define elements
    */
-  eventTitle_Span: {
-    get: function() {
-      return browser.element('[translate="events.events"]');
-    }
-  },
+  eventTitle_Span: { get: function() { return browser.element('[translate="events.events"]'); } },
 
   /**
    * define or overwrite page methods

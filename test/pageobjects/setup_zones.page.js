@@ -13,11 +13,7 @@ var ZonesPage = Object.create(Page, {
   /**
    * define elements
    */
-  zonesTitle_Span: {
-    get: function() {
-      return browser.element('[translate="zones.venueMap"]');
-    }
-  },
+  zonesTitle_Span: { get: function() { return browser.element('[translate="zones.venueMap"]'); } },
 
   /**
    * define or overwrite page methods
@@ -25,12 +21,6 @@ var ZonesPage = Object.create(Page, {
   open: {
     value: function() {
       Page.open.call(this, "/resale/ui/zones");
-    }
-  },
-
-  submit: {
-    value: function() {
-      this.form.submitForm();
     }
   }
 });

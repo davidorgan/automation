@@ -28,7 +28,7 @@ var pageLoadWaitTime = 5000;
 suite(testSuiteName, () => {
   browser.logger.info('Starting test for suite "' + testSuiteName + '"');
   test("A_Qcue - Home Loads", () => {
-    LoginPage.login();
+    LoginPage.LoginActions.login();
   });
 
   test("B_Qcue - Setup - Events: Loads", () => {

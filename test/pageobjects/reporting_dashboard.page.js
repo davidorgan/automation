@@ -13,11 +13,7 @@ var DashboardPage = Object.create(Page, {
   /**
    * define elements
    */
-  appPageNav_Div: {
-    get: function() {
-      return browser.element(".app-page-nav");
-    }
-  },
+  appPageNav_Div: { get: function() { return browser.element(".app-page-nav"); } },
 
   /**
    * define or overwrite page methods
@@ -25,12 +21,6 @@ var DashboardPage = Object.create(Page, {
   open: {
     value: function() {
       Page.open.call(this, "/resale/ui/dashboard");
-    }
-  },
-
-  submit: {
-    value: function() {
-      this.form.submitForm();
     }
   }
 });

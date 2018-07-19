@@ -13,11 +13,7 @@ var ReportsPage = Object.create(Page, {
   /**
    * define elements
    */
-  reportsTitle_Span: {
-    get: function() {
-      return browser.element('[translate="reports.reports"]');
-    }
-  },
+  reportsTitle_Span: { get: function() { return browser.element('[translate="reports.reports"]'); } },
 
   /**
    * define or overwrite page methods
@@ -25,12 +21,6 @@ var ReportsPage = Object.create(Page, {
   open: {
     value: function() {
       Page.open.call(this, "/resale/ui/reports");
-    }
-  },
-
-  submit: {
-    value: function() {
-      this.form.submitForm();
     }
   }
 });

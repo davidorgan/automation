@@ -11,8 +11,7 @@ var test1;
 suite((testSuiteName = "Login Test Suite"), () => {
   test((test1 = "A_Login to resale succesfully"), () => {
     browser.logger.info('Starting test for "' + test1 + '"');
-
-    LoginPage.login();
+    LoginPage.LoginActions.login();
   });
 
   test("B_Logout of resale succesfully", () => {

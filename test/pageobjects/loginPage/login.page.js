@@ -13,21 +13,9 @@ var LoginPage = Object.create(Page, {
   /**
    * define elements
    */
-  username_Input: {
-    get: function() {
-      return browser.element('[name="j_username"]');
-    }
-  },
-  password_Input: {
-    get: function() {
-      return browser.element('[name="j_password"]');
-    }
-  },
-  submit_Button: {
-    get: function() {
-      return browser.element(".submitButton");
-    }
-  }
+  username_Input: { get: function() { return browser.element('[name="j_username"]'); } },
+  password_Input: { get: function() { return browser.element('[name="j_password"]'); } },
+  submit_Button: { get: function() { return browser.element(".submitButton"); } }
 });
 
 module.exports = LoginPage;

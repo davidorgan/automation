@@ -13,11 +13,7 @@ var HistoryPage = Object.create(Page, {
   /**
    * define elements
    */
-  historyTitle_Span: {
-    get: function() {
-      return browser.element('[translate="history.history"]');
-    }
-  },
+  historyTitle_Span: { get: function() { return browser.element('[translate="history.history"]'); } },
 
   /**
    * define or overwrite page methods
@@ -25,12 +21,6 @@ var HistoryPage = Object.create(Page, {
   open: {
     value: function() {
       Page.open.call(this, "/resale/ui/history");
-    }
-  },
-
-  submit: {
-    value: function() {
-      this.form.submitForm();
     }
   }
 });

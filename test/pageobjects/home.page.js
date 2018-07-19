@@ -26,368 +26,95 @@ var ageValue;
 
 var param = 1;
 
-var eventListings = {
-  eventName: "",
-  eventListing: {
-    listingSection: "",
-    listingRow: "",
-    listingQuantity: "",
-    listingCost: "",
-    listingCurrent: "",
-    listingNew: "",
-    listingChange: ""
-  }
-};
-
-var reviewPaneEvent = {
-  eventName: "",
-  eventListing: {
-    listingSection: "",
-    listingRow: "",
-    listingQuantity: "",
-    listingCost: "",
-    listingCurrent: "",
-    listingNew: "",
-    listingChange: ""
-  }
-};
+var eventListings = { eventName: "", eventListing: { listingSection: "", listingRow: "", listingQuantity: "", listingCost: "", listingCurrent: "", listingNew: "", listingChange: "" } };
+var reviewPaneEvent = { eventName: "", eventListing: { listingSection: "", listingRow: "", listingQuantity: "", listingCost: "", listingCurrent: "", listingNew: "", listingChange: "" } };
 
 var HomePage = Object.create(Page, {
   /**
    * define elements
    */
   //Used as default for all wait for visible checks
-  defaultWait: {
-    get: function() {
-      return 3000;
-    }
-  },
+  defaultWait: { get: function() { return 3000; } },
 
-  listingSwatch_Container: {
-    get: function() {
-      return browser.element(
-        '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[1]/table/thead/tr/th[1]'
-      );
-    }
-  },
-  resellerList_Dropdown: {
-    get: function() {
-      return browser.element(".resellerMenu");
-    }
-  },
-  priceCart_Icon: {
-    get: function() {
-      return browser.element(".homePriceCart");
-    }
-  },
+  listingSwatch_Container: { get: function() { return browser.element( '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[1]/table/thead/tr/th[1]' ); } },
+  resellerList_Dropdown: { get: function() { return browser.element(".resellerMenu"); } },
+  priceCart_Icon: { get: function() { return browser.element(".homePriceCart"); } },
 
   //Listings Table
-  listingsTableHeader_Tr: {
-    get: function() {
-      return browser.element(".homePageListingsHeader");
-    }
-  },
-  listingsTableSectionHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderSection");
-    }
-  },
+  listingsTableHeader_Tr: { get: function() { return browser.element(".homePageListingsHeader"); } },
+  listingsTableSectionHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderSection"); } },
   //homePageListingHeaderRow
-  listingsTableRowHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderRow");
-    }
-  },
+  listingsTableRowHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderRow"); } },
   //homePageListingHeaderQuantity
-  listingsTableQtyHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderQuantity");
-    }
-  },
+  listingsTableQtyHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderQuantity"); } },
   //homePageListingHeaderCost
-  listingsTableCostHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderCost");
-    }
-  },
+  listingsTableCostHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderCost"); } },
   //homePageListingHeaderPrice //price
-  listingsTablePriceHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderPrice");
-    }
-  },
+  listingsTablePriceHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderPrice"); } },
   //homePageListingHeaderChange
-  listingsTablePriceChangeHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderChange");
-    }
-  },
+  listingsTablePriceChangeHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderChange"); } },
   //homePageListingHeaderMargin //roi
-  listingsTableROIHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderMargin");
-    }
-  },
+  listingsTableROIHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderMargin"); } },
   //homePageListingHeaderStale //age
-  listingsTableAgeHeader_Th: {
-    get: function() {
-      return this.listingsTableHeader_Tr.element(".homePageListingHeaderStale");
-    }
-  },
+  listingsTableAgeHeader_Th: { get: function() { return this.listingsTableHeader_Tr.element(".homePageListingHeaderStale"); } },
 
   //Event info header area
-  mapPageEvent_Div: {
-    get: function() {
-      return browser.element(".mapPageEvent");
-    }
-  },
-  nextEvent_Button: {
-    get: function() {
-      return this.mapPageEvent_Div.element('[ng-click="showNextEventInfo()"]');
-    }
-  },
-  prevEvent_Button: {
-    get: function() {
-      return this.mapPageEvent_Div.element(
-        '[ng-click="showPreviousEventInfo()"]'
-      );
-    }
-  },
-  eventHomeTitle_Span: {
-    get: function() {
-      return this.mapPageEvent_Div.element(".eventTitle");
-    }
-  },
-  eventHomeVenueTimeTitle_Span: {
-    get: function() {
-      return this.mapPageEvent_Div.element(".homeEventDetails");
-    }
-  },
-  eventHomeMonthDayTitle_Span: {
-    get: function() {
-      return this.mapPageEvent_Div.element(".eventMonthDay");
-    }
-  },
-  eventSelectionToggle_Li: {
-    get: function() {
-      return this.mapPageEvent_Div.element(".mapPageEventsSelectionToggle");
-    }
-  },
+  mapPageEvent_Div: { get: function() { return browser.element(".mapPageEvent"); } },
+  nextEvent_Button: { get: function() { return this.mapPageEvent_Div.element('[ng-click="showNextEventInfo()"]'); } },
+  prevEvent_Button: { get: function() { return this.mapPageEvent_Div.element( '[ng-click="showPreviousEventInfo()"]' ); } },
+  eventHomeTitle_Span: { get: function() { return this.mapPageEvent_Div.element(".eventTitle"); } },
+  eventHomeVenueTimeTitle_Span: { get: function() { return this.mapPageEvent_Div.element(".homeEventDetails"); } },
+  eventHomeMonthDayTitle_Span: { get: function() { return this.mapPageEvent_Div.element(".eventMonthDay"); } },
+  eventSelectionToggle_Li: { get: function() { return this.mapPageEvent_Div.element(".mapPageEventsSelectionToggle"); } },
 
-  listingHasReseller_Row: {
-    get: function() {
-      return browser.elements('[iscurrentreseller="true"]');
-    }
-  },
-  listingNotReseller_Row: {
-    get: function() {
-      return browser.elements('[iscurrentreseller="false"]');
-    }
-  },
+  listingHasReseller_Row: { get: function() { return browser.elements('[iscurrentreseller="true"]'); } },
+  listingNotReseller_Row: { get: function() { return browser.elements('[iscurrentreseller="false"]'); } },
 
   //Review pane:
-  homePriceCartText_Span: {
-    get: function() {
-      return browser.element(".homePriceCartText");
-    }
-  },
-  navReviewPane_Div: {
-    get: function() {
-      return browser.element(".navReviewPane");
-    }
-  },
-  reviewPaneHeader_Div: {
-    get: function() {
-      return browser.element(".review-pane-header");
-    }
-  },
-  reviewPaneListingCount_Span: {
-    get: function() {
-      return browser.element(".listingCount");
-    }
-  },
-  reviewListingsTablePerEvent_Table: {
-    get: function() {
-      return browser.elements(".reviewListingsTable");
-    }
-  },
-  reviewPaneCarets_I: {
-    get: function() {
-      return browser.elements('[ng-show="!changeSet.showListings"]');
-    }
-  },
-  reviewPaneCaret1_I: {
-    get: function() {
-      return browser.element("/html/body/div[1]/div/div[3]/div/div/i[1]");
-    }
-  },
-  newPricesReviewPane_Span: {
-    get: function() {
-      return browser.elements(".newPrice");
-    }
-  },
+  homePriceCartText_Span: { get: function() { return browser.element(".homePriceCartText"); } },
+  navReviewPane_Div: { get: function() { return browser.element(".navReviewPane"); } },
+  reviewPaneHeader_Div: { get: function() { return browser.element(".review-pane-header"); } },
+  reviewPaneListingCount_Span: { get: function() { return browser.element(".listingCount"); } },
+  reviewListingsTablePerEvent_Table: { get: function() { return browser.elements(".reviewListingsTable"); } },
+  reviewPaneCarets_I: { get: function() { return browser.elements('[ng-show="!changeSet.showListings"]'); } },
+  reviewPaneCaret1_I: { get: function() { return browser.element("/html/body/div[1]/div/div[3]/div/div/i[1]"); } },
+  newPricesReviewPane_Span: { get: function() { return browser.elements(".newPrice"); } },
 
-  eventsReviewPane_Container: {
-    get: function() {
-      return browser.elements(
-        '[ng-repeat="changeSet in filteredEvents = (changeSets | filter: reviewSearchFilter | orderBy: eventFilter)"]'
-      );
-    }
-  },
-  eventsReviewPaneHeaders_Span: {
-    get: function() {
-      return this.eventsReviewPane_Container.elements(".//div/span");
-    }
-  },
+  eventsReviewPane_Container: { get: function() { return browser.elements( '[ng-repeat="changeSet in filteredEvents = (changeSets | filter: reviewSearchFilter | orderBy: eventFilter)"]' ); } },
+  eventsReviewPaneHeaders_Span: { get: function() { return this.eventsReviewPane_Container.elements(".//div/span"); } },
 
-  reviewPaneListings_Table: {
-    get: function() {
-      return browser.elements(".listingsTable");
-    }
-  },
-  reviewPaneListings_Row: {
-    get: function() {
-      return this.reviewPaneListings_Table.elements(".//tbody/tr");
-    }
-  },
+  reviewPaneListings_Table: { get: function() { return browser.elements(".listingsTable"); } },
+  reviewPaneListings_Row: { get: function() { return this.reviewPaneListings_Table.elements(".//tbody/tr"); } },
   //Test Page Objects
-  QcueReseller_Link: {
-    get: function() {
-      return browser.element("a*=Qcue");
-    }
-  },
-  PrimeSportReseller_Link: {
-    get: function() {
-      return browser.element("a*=PrimeSport");
-    }
-  },
-  testReseller_Link: {
-    get: function() {
-      return browser.element("a*=Test:Reseller");
-    }
-  },
-  firstListingEditPrice_Span: {
-    get: function() {
-      return browser.element(
-        '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' +
-          param +
-          "]/td[8]/div/span[1]"
-      );
-    }
-  },
+  QcueReseller_Link: { get: function() { return browser.element("a*=Qcue"); } },
+  PrimeSportReseller_Link: { get: function() { return browser.element("a*=PrimeSport"); } },
+  testReseller_Link: { get: function() { return browser.element("a*=Test:Reseller"); } },
+  firstListingEditPrice_Span: { get: function() { return browser.element( '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' + param + "]/td[8]/div/span[1]" ); } },
 
-  firstListingEditPrice_SelectorText: {
-    get: function() {
-      return (
-        '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' +
-        param +
-        "]/td[8]/div/span[1]"
-      );
-    }
-  },
-  firstListingEditPrice_iLink: {
-    get: function() {
-      return browser.element(
-        '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' +
-          param +
-          "]/td[8]/div/span[3]/ul[1]/li[3]/i"
-      );
-    }
-  },
-  firstListingEditPrice_Input: {
-    get: function() {
-      return browser.element(
-        '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' +
-          param +
-          "]/td[8]/div/form/div/input"
-      );
-    }
-  },
+  firstListingEditPrice_SelectorText: { get: function() { return ( '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' + param + "]/td[8]/div/span[1]" ); } },
+  firstListingEditPrice_iLink: { get: function() { return browser.element( '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' + param + "]/td[8]/div/span[3]/ul[1]/li[3]/i" ); } },
+  firstListingEditPrice_Input: { get: function() { return browser.element( '//*[@id="mapPage"]/div[2]/div[3]/div[2]/ul/li[2]/div[2]/table/tbody/tr[' + param + "]/td[8]/div/form/div/input" ); } },
+  
+  firstNewPriceInCart_Span: { get: function() { return browser.element( "/html/body/div[1]/div/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[6]/span[1]/span" ); } },
 
-  firstNewPriceInCart_Span: {
-    get: function() {
-      return browser.element(
-        "/html/body/div[1]/div/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[6]/span[1]/span"
-      );
-    }
-  },
+  reviewPaneEvents_Container: { get: function() { return browser.element(".reviewPaneScrollHolder"); } },
+  reviewPaneEvent_Header: { get: function() { return this.reviewPaneEvents_Container.elements("/div"); } },
 
-  reviewPaneEvents_Container: {
-    get: function() {
-      return browser.element(".reviewPaneScrollHolder");
-    }
-  },
-  reviewPaneEvent_Header: {
-    get: function() {
-      return this.reviewPaneEvents_Container.elements("/div");
-    }
-  },
+  newPricesinCart: { get: function() { return browser.elements('[ng-if="!changeSet.updating"]'); } },
 
-  newPricesinCart: {
-    get: function() {
-      return browser.elements('[ng-if="!changeSet.updating"]');
-    }
-  },
+  firstNewPriceInCart_Input: { get: function() { return browser.element( "/html/body/div[1]/div/div[3]/table/tbody/tr[" + param + "]/td/table/tbody/tr/td[6]/span[1]" ); } },
+  firstUndoPriceEditInCart_Span: { get: function() { return browser.element('//*[@id="Layer_1"]'); } },
 
-  firstNewPriceInCart_Input: {
-    get: function() {
-      return browser.element(
-        "/html/body/div[1]/div/div[3]/table/tbody/tr[" +
-          param +
-          "]/td/table/tbody/tr/td[6]/span[1]"
-      );
-    }
-  },
-  firstUndoPriceEditInCart_Span: {
-    get: function() {
-      return browser.element('//*[@id="Layer_1"]');
-    }
-  },
+  selectChangesetsAll_Checkbox: { get: function() { return browser.element(".selectChangesetsAll"); } },
+  firstSelectZoneAll_Checkbox: { get: function() { return browser.element('//*[@id="result0"]'); } },
+  firstSelectChangeSetInZone_Checkbox: { get: function() { return browser.element( "/html/body/div[1]/div/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div/span/input" ); } },
 
-  selectChangesetsAll_Checkbox: {
-    get: function() {
-      return browser.element(".selectChangesetsAll");
-    }
-  },
-  firstSelectZoneAll_Checkbox: {
-    get: function() {
-      return browser.element('//*[@id="result0"]');
-    }
-  },
-  firstSelectChangeSetInZone_Checkbox: {
-    get: function() {
-      return browser.element(
-        "/html/body/div[1]/div/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div/span/input"
-      );
-    }
-  },
+  submitCart_SelectorText: { get: function() { return "/html/body/div[1]/div/div[5]/button[1]"; } },
+  submitCart_Button: { get: function() { return browser.element("/html/body/div[1]/div/div[5]/button[1]"); } },
+  rejectCart_SelectorText: { get: function() { return "/html/body/div[1]/div/div[5]/button[2]"; } },
+  rejectCart_Button: { get: function() { return browser.element("/html/body/div[1]/div/div[5]/button[2]"); } },
 
-  submitCart_SelectorText: {
-    get: function() {
-      return "/html/body/div[1]/div/div[5]/button[1]";
-    }
-  },
-  submitCart_Button: {
-    get: function() {
-      return browser.element("/html/body/div[1]/div/div[5]/button[1]");
-    }
-  },
-  rejectCart_SelectorText: {
-    get: function() {
-      return "/html/body/div[1]/div/div[5]/button[2]";
-    }
-  },
-  rejectCart_Button: {
-    get: function() {
-      return browser.element("/html/body/div[1]/div/div[5]/button[2]");
-    }
-  },
-
-  listingInOtherCart_Style: {
-    get: function() {
-      return browser.element(".homePageInOtherCart");
-    }
-  },
+  listingInOtherCart_Style: { get: function() { return browser.element(".homePageInOtherCart"); } },
 
   /**
    * define or overwrite page methods

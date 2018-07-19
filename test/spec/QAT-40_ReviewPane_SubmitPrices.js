@@ -30,7 +30,7 @@ suite((testSuiteName = "QAT-40 - Review pane - Submit checked prices"), () => {
     browser.logger.info(
       "Starting test for QAT-40 - Review pane - Submit checked prices"
     );
-    LoginPage.login(); //Goes to base url and logs in to resale
+    LoginPage.LoginActions.login(); //Goes to base url and logs in to resale
 
     // -------------------------------------------------------------------------- //
     // *** Step 2 - Add multiple price changes from multiple events and zones *** //

@@ -13,11 +13,7 @@ var UsersPage = Object.create(Page, {
   /**
    * define elements
    */
-  usersTitle_Span: {
-    get: function() {
-      return browser.element('[translate="users.users"]');
-    }
-  },
+  usersTitle_Span: { get: function() { return browser.element('[translate="users.users"]'); } },
 
   /**
    * define or overwrite page methods
@@ -25,12 +21,6 @@ var UsersPage = Object.create(Page, {
   open: {
     value: function() {
       Page.open.call(this, "/resale/ui/users");
-    }
-  },
-
-  submit: {
-    value: function() {
-      this.form.submitForm();
     }
   }
 });
