@@ -18,7 +18,7 @@ var test1;
 
 var extendedWait = 5000;
 
-suite((testSuiteName = "Login Test Suite"), () => {
+suite((testSuiteName = "QAT-445_Login"), () => {
   test((test1 = "A_Login to resale succesfully"), () => {
     browser.logger.info('Starting test for "' + test1 + '"');
     LoginActions.login();
