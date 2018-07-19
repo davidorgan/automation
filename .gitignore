@@ -39,4 +39,4 @@ Thumbs.db
 #Paths#
 node_modules/
 screenshots/*.png
-reports/*.xml
+reports/junit/*.xml
