@@ -10,7 +10,7 @@ var chai = require("chai"),
 var AccountMenuActions = Object.create(Page, {
   logout: {
     value: function() {
-        AccountMenuPage.userMenu_Container.moveTo(0,0);
+        AccountMenuPage.userMenu_Container.moveToObject();
         AccountMenuPage.userMenuLogout_Link.click();
     }
   }
