@@ -1,7 +1,7 @@
 "use strict";
 // accountMenu.page.js
 var Page = require("../page");
-var versionNum = '4.8.0';
+var versionNum = '4.8.5';
 
 var AccountMenuPage = Object.create(Page, {
   /**

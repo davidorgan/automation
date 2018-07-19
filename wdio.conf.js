@@ -48,8 +48,11 @@ exports.config = {
            './test/spec/PageLoad.js',
         ],
         login: [
-          './test/spec/Login.js'
+          './test/spec/QAT-445_Login.js'
         ],
+        version: [
+            './test/spec/QAT-77_Version number displayed.js'
+          ],
         api: [
           './test/spec/api/firsttest.api.js'
         ],

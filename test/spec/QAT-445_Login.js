@@ -27,7 +27,7 @@ suite((testSuiteName = "Login Test Suite"), () => {
   test("B_Logout of resale succesfully", () => {
     HomePage.listingHasReseller_Row.waitForVisible(extendedWait);
     AccountMenuActions.logout();
-    
+
     LoginPage.username_Input.waitForVisible(HomePage.defaultWait);
     LoginPage.password_Input.waitForVisible(HomePage.defaultWait);
     LoginPage.submit_Button.waitForVisible(HomePage.defaultWait);

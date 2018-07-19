@@ -8,12 +8,17 @@ var chai = require("chai"),
   should = chai.should();
 
 var AccountMenuActions = Object.create(Page, {
-  logout: {
-    value: function() {
-        AccountMenuPage.userMenu_Container.moveToObject();
-        AccountMenuPage.userMenuLogout_Link.click();
+    hoverMenu: {
+        value: function() {
+            AccountMenuPage.userMenu_Container.moveToObject();
+        }
+    },
+    logout: {
+        value: function() {
+            AccountMenuPage.userMenu_Container.moveToObject();
+            AccountMenuPage.userMenuLogout_Link.click();
+        }
     }
-  }
 });
 
 module.exports = AccountMenuActions;

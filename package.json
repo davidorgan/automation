@@ -27,6 +27,7 @@
     "test": "wdio wdio.conf.js",
     "testSuite-pageLoad": "./node_modules/.bin/wdio wdio.conf.js --suite pageLoad",
     "testSuite-login": "./node_modules/.bin/wdio wdio.conf.js --suite login",
+    "testSuite-version": "./node_modules/.bin/wdio wdio.conf.js --suite version",
     "testSuite-api": "./node_modules/.bin/wdio wdio.conf.js --suite api",
     "testSuite-priceChanges": "./node_modules/.bin/wdio wdio.conf.js --suite priceChanges",
     "testSuite-priceChangesReject": "./node_modules/.bin/wdio wdio.conf.js --suite priceChangesReject",
