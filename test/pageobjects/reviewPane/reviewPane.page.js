@@ -45,7 +45,14 @@ var ReviewPanePage = Object.create(Page, {
     //Review Pane Listing Changesets
     reviewPaneListings_Container: { get: function() { return this.reviewPane_Container.element('.reviewPaneScrollHolder'); } },
       reviewPaneListingsPerEvent_Container: { get: function() { return this.reviewPaneListings_Container.elements('.sortItems'); } },
-    
+        reviewPaneListingsCurrentEventHeader_Container: { get: function() { return this.reviewPaneListingsPerEvent_Container.element('.currentEventBlue'); } },
+          reviewPaneListingsCurrentEventHeaderText_Span: { get: function() { return this.reviewPaneListingsCurrentEventHeader_Container.element('//span'); } },
+
+        //All Listing containers for each event
+        reviewPaneEventListings_Container: { get: function() { return this.reviewPaneListingsPerEvent_Container.elements('[ng-if="changeSet.showListings"]'); } },
+          reviewPaneEventListingsRows_Tr: { get: function() { return this.reviewPaneEventListings_Container.elements('//tr'); } },
+            reviewPaneEventListingsRowCheckbox_Checkbox: { get: function() { return this.reviewPaneEventListingsRows_Tr.element('[type="checkbox"]'); } },
+          
 });
 
 module.exports = ReviewPanePage;
