@@ -52,7 +52,7 @@ var ReviewPanePage = Object.create(Page, {
         reviewPaneEventListings_Container: { get: function() { return this.reviewPaneListingsPerEvent_Container.elements('[ng-if="changeSet.showListings"]'); } },
           reviewPaneEventListingsRows_Tr: { get: function() { return this.reviewPaneEventListings_Container.elements('//tr'); } },
             reviewPaneEventListingsRowCheckbox_Checkbox: { get: function() { return this.reviewPaneEventListingsRows_Tr.element('[type="checkbox"]'); } },
-          
+        
 });
 
 module.exports = ReviewPanePage;
