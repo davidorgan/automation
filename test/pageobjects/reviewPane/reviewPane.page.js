@@ -28,13 +28,23 @@ var ReviewPanePage = Object.create(Page, {
       reviewPaneHeaderClose_Container: { get: function() { return this.reviewPaneHeader_Container.element('#closeReviewPane'); } }, 
 
     //Review Pane Search Bar
-
+      /* Unique IDs to be added */
     //Review Pane View/Sort by Header
+      /* Unique IDs to be added */
 
     //Review Pane Sort Container 
-    reviewPaneSort_Container: { get: function() { return this.reviewPane_Container.element('.reviewPaneSortContainer-pane-header'); } },
+    reviewPaneSort_Container: { get: function() { return this.reviewPane_Container.element('.reviewPaneSortContainer'); } },
       reviewPaneSortSelectAll_Checkbox: { get: function() { return this.reviewPaneSort_Container.element('.selectChangesetsAll'); } },
-      reviewPaneSortZone_Container: { get: function() { return this.reviewPaneSort_Container.element('.selectChangesetsAll'); } },
+      reviewPaneSortZone_Container: { get: function() { return this.reviewPaneSort_Container.element('#reviewPaneZoneSort'); } },
+      reviewPaneSortQty_Container: { get: function() { return this.reviewPaneSort_Container.element('#reviewPaneQtySort'); } },
+      reviewPaneSortCost_Container: { get: function() { return this.reviewPaneSort_Container.element('#reviewPaneCostSort'); } },
+      reviewPaneSortCurrent_Container: { get: function() { return this.reviewPaneSort_Container.element('#reviewPaneOldPriceSort'); } },
+      reviewPaneSortNew_Container: { get: function() { return this.reviewPaneSort_Container.element('#reviewPaneNewPriceSort'); } },
+      reviewPaneSortChange_Container: { get: function() { return this.reviewPaneSort_Container.element('#reviewPaneRoiSort'); } },
+
+    //Review Pane Listing Changesets
+    reviewPaneListings_Container: { get: function() { return this.reviewPane_Container.element('.reviewPaneScrollHolder'); } },
+      reviewPaneListingsPerEvent_Container: { get: function() { return this.reviewPaneListings_Container.elements('.sortItems'); } },
 });
 
 module.exports = ReviewPanePage;
