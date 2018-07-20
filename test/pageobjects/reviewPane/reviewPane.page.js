@@ -45,6 +45,7 @@ var ReviewPanePage = Object.create(Page, {
     //Review Pane Listing Changesets
     reviewPaneListings_Container: { get: function() { return this.reviewPane_Container.element('.reviewPaneScrollHolder'); } },
       reviewPaneListingsPerEvent_Container: { get: function() { return this.reviewPaneListings_Container.elements('.sortItems'); } },
+    
 });
 
 module.exports = ReviewPanePage;
