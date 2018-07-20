@@ -10,39 +10,31 @@ var ReviewPanePage = Object.create(Page, {
   /**
    * define elements
    **/
-  homePriceCartText_Span: { get: function() { return browser.element(".homePriceCartText"); } },
-  navReviewPane_Div: { get: function() { return browser.element(".navReviewPane"); } },
-  reviewPaneHeader_Div: { get: function() { return browser.element(".review-pane-header"); } },
-  reviewPaneListingCount_Span: { get: function() { return browser.element(".listingCount"); } },
-  reviewListingsTablePerEvent_Table: { get: function() { return browser.elements(".reviewListingsTable"); } },
-  reviewPaneCarets_I: { get: function() { return browser.elements('[ng-show="!changeSet.showListings"]'); } },
-  reviewPaneCaret1_I: { get: function() { return browser.element("/html/body/div[1]/div/div[3]/div/div/i[1]"); } },
-  newPricesReviewPane_Span: { get: function() { return browser.elements(".newPrice"); } },
 
-  eventsReviewPane_Container: { get: function() { return browser.elements( '[ng-repeat="changeSet in filteredEvents = (changeSets | filter: reviewSearchFilter | orderBy: eventFilter)"]' ); } },
-  eventsReviewPaneHeaders_Span: { get: function() { return this.eventsReviewPane_Container.elements(".//div/span"); } },
+  //Cart
+  priceChangeCart_Frame: { get: function() { return browser.element('.homePriceCartFrame'); } },
+    priceChangeCart_Span: { get: function() { return this.priceChangeCart_Frame.element('.homePriceCart'); } },
+      priceChangeCartIcon_Span: { get: function() { return this.priceChangeCart_Span.element('.homePriceCartIcon'); } },
+        priceChangeCartIconImage_I: { get: function() { return this.priceChangeCartIcon_Span.element('.fa-shopping-cart'); } },
+        priceChangeCartIconText_Span: { get: function() { return this.priceChangeCartIcon_Span.element('.homePriceCartText'); } },
 
-  reviewPaneListings_Table: { get: function() { return browser.elements(".listingsTable"); } },
-  reviewPaneListings_Row: { get: function() { return this.reviewPaneListings_Table.elements(".//tbody/tr"); } },
 
-  reviewPaneEvents_Container: { get: function() { return browser.element(".reviewPaneScrollHolder"); } },
-  reviewPaneEvent_Header: { get: function() { return this.reviewPaneEvents_Container.elements("/div"); } },
+  //Review Pane Container
+  reviewPane_Container: { get: function() { return browser.element('.navReviewPane'); } },
+    reviewPaneHeader_Container: { get: function() { return this.reviewPane_Container.element('.review-pane-header'); } },
+      reviewPaneHeaderLeft_Container: { get: function() { return this.reviewPaneHeader_Container.element('#headerLeft'); } },
+        reviewPaneHeaderLeftText_Span: { get: function() { return this.reviewPaneHeaderLeft_Container.element('[translate="review.header"]'); } },
+        reviewPaneHeaderLeftListingCount_Span: { get: function() { return this.reviewPaneHeaderLeft_Container.element('.listingCount'); } },
+      reviewPaneHeaderClose_Container: { get: function() { return this.reviewPaneHeader_Container.element('#closeReviewPane'); } }, 
 
-  newPricesinCart: { get: function() { return browser.elements('[ng-if="!changeSet.updating"]'); } },
+    //Review Pane Search Bar
 
-  firstNewPriceInCart_Input: { get: function() { return browser.element( "/html/body/div[1]/div/div[3]/table/tbody/tr[" + param + "]/td/table/tbody/tr/td[6]/span[1]" ); } },
-  firstUndoPriceEditInCart_Span: { get: function() { return browser.element('//*[@id="Layer_1"]'); } },
+    //Review Pane View/Sort by Header
 
-  selectChangesetsAll_Checkbox: { get: function() { return browser.element(".selectChangesetsAll"); } },
-  firstSelectZoneAll_Checkbox: { get: function() { return browser.element('//*[@id="result0"]'); } },
-  firstSelectChangeSetInZone_Checkbox: { get: function() { return browser.element( "/html/body/div[1]/div/div[3]/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div/span/input" ); } },
-
-  submitCart_SelectorText: { get: function() { return "/html/body/div[1]/div/div[5]/button[1]"; } },
-  submitCart_Button: { get: function() { return browser.element("/html/body/div[1]/div/div[5]/button[1]"); } },
-  rejectCart_SelectorText: { get: function() { return "/html/body/div[1]/div/div[5]/button[2]"; } },
-  rejectCart_Button: { get: function() { return browser.element("/html/body/div[1]/div/div[5]/button[2]"); } },
-
-  listingInOtherCart_Style: { get: function() { return browser.element(".homePageInOtherCart"); } }
+    //Review Pane Sort Container 
+    reviewPaneSort_Container: { get: function() { return this.reviewPane_Container.element('.reviewPaneSortContainer-pane-header'); } },
+      reviewPaneSortSelectAll_Checkbox: { get: function() { return this.reviewPaneSort_Container.element('.selectChangesetsAll'); } },
+      reviewPaneSortZone_Container: { get: function() { return this.reviewPaneSort_Container.element('.selectChangesetsAll'); } },
 });
 
 module.exports = ReviewPanePage;
