@@ -30,6 +30,6 @@ suite("Version number test suite", () => {
     LoginActions.login();
 
     AccountMenuActions.hoverMenu();
-    expect(AccountMenuPage.userMenuVersion_Li.getText()).to.be.eql('Qcue 4.8.5');
+    expect(AccountMenuPage.userMenuVersion_Li.getText()).to.be.eql('Qcue ' + userData.versionNum);
   });
 });

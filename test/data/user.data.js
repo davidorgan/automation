@@ -24,6 +24,12 @@ var userData = Object.create(Data, {
     get: function() {
       return "https://dev-resale.vpc.qcue.com/resale";
     }
+  },
+
+  versionNum: {
+    get: function() {
+      return "4.8.0";
+    }
   }
 });
 
