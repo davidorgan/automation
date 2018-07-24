@@ -13,13 +13,13 @@ const ReviewPane = require("../pageobjects/reviewPane");
 const EventListingsTable = require("../pageobjects/eventListingsTable"),
     EventListingsTablePage = EventListingsTable.EventListingsTablePage,
     EventListingsTableActions = EventListingsTable.EventListingsTableActions;
-const EventListDropdown = require("../pageobjects/eventListingsTable"),
+const EventListDropdown = require("../pageobjects/eventListDropdown"),
     EventListDropdownPage = EventListDropdown.EventListDropdownPage,
     EventListDropdownActions = EventListDropdown.EventListDropdownActions;
 const HomePage = require("../pageobjects/home.page");
 const userData = require("../data/user.data");
 
-suite((testSuiteName = "QAT-41 - Review pane - Reject checked prices"), () => {
+suite(("QAT-41 - Review pane - Reject checked prices", () => {
     test("QAT-41 - Review pane - Reject checked prices", () => {
         // -------------------------------- //
         // *** Step 0 - Login to Resale *** //

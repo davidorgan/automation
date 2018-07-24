@@ -6,7 +6,9 @@ chai.use(chaiWebdriver(browser));
 var chai = require('chai')
   , expect = chai.expect
   , should = chai.should();
-const LoginPage = require('../pageobjects/login.page');
+const Login = require("../pageobjects/loginPage"),
+  LoginActions = Login.LoginActions,
+  LoginPage = Login.LoginPage;
 const HomePage = require('../pageobjects/home.page');
 const userData = require('../data/user.data');
 

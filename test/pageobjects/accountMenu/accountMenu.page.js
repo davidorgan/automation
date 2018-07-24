@@ -2,7 +2,7 @@
 // accountMenu.page.js
 var Page = require("../page");
 
-const userData = require('./test/data/user.data');
+const userData = require('../../data/user.data');
 var versionNum = userData.versionNum;
 
 var AccountMenuPage = Object.create(Page, {
