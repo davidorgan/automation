@@ -14,12 +14,12 @@ const EventListingsTable = require("../pageobjects/eventListingsTable"),
     EventListingsTablePage = EventListingsTable.EventListingsTablePage,
     EventListingsTableActions = EventListingsTable.EventListingsTableActions;
 const EventListDropdown = require("../pageobjects/eventListDropdown"),
-    EventListDropdownPage = EventListDropdown.EventListDropdownPage,
-    EventListDropdownActions = EventListDropdown.EventListDropdownActions;
+    EventListDropdownPage = EventListDropdown.EventListPage,
+    EventListDropdownActions = EventListDropdown.EventListActions;
 const HomePage = require("../pageobjects/home.page");
 const userData = require("../data/user.data");
 
-suite(("QAT-41 - Review pane - Reject checked prices", () => {
+suite("QAT-41 - Review pane - Reject checked prices", () => {
     test("QAT-41 - Review pane - Reject checked prices", () => {
         // -------------------------------- //
         // *** Step 0 - Login to Resale *** //
@@ -54,11 +54,12 @@ suite(("QAT-41 - Review pane - Reject checked prices", () => {
             if (EventListingsTablePage.listingHasReseller_Row.value.length < 4) {
             numListingsToEdit = EventListingsTablePage.listingHasReseller_Row.value.length;
             }
-    
+            
+            var rowNum = 0;
             for (var j = 0; j < numListingsToEdit; j++) {
             rowNum = j + 1;
             //Function to edit all listings prices for event
-            listingPriceResults = EventListingsTablePage.editPrice(10, rowNum); //returns object like { currentPriceRes: '$14900', newPriceRes: 159 }
+            listingPriceResults = EventListingsTableActions.editPrice(10, rowNum); //returns object like { currentPriceRes: '$14900', newPriceRes: 159 }
             priceResults[numPriceChanges] = listingPriceResults; //Add edit price results obj to array of results
             numPriceChanges = numPriceChanges + 1;
             }

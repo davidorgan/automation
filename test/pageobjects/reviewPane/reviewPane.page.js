@@ -28,9 +28,9 @@ var ReviewPanePage = Object.create(Page, {
       reviewPaneHeaderClose_Container: { get: function() { return this.reviewPaneHeader_Container.element('#closeReviewPane'); } }, 
 
     //Review Pane Search Bar
-      /* Unique IDs to be added */
+    reviewPaneSearchBar_Container: { get: function() { return this.reviewPane_Container.element('#reviewPaneSearch'); } },
     //Review Pane View/Sort by Header
-      /* Unique IDs to be added */
+    reviewPaneViewSort_Container: { get: function() { return this.reviewPane_Container.element('#reviewPaneViewSort'); } },
 
     //Review Pane Sort Container 
     reviewPaneSort_Container: { get: function() { return this.reviewPane_Container.element('.reviewPaneSortContainer'); } },
@@ -53,6 +53,10 @@ var ReviewPanePage = Object.create(Page, {
           reviewPaneEventListingsRows_Tr: { get: function() { return this.reviewPaneEventListings_Container.elements('//tr'); } },
             reviewPaneEventListingsRowCheckbox_Checkbox: { get: function() { return this.reviewPaneEventListingsRows_Tr.element('[type="checkbox"]'); } },
   
+    //Review Pane Buttons
+    reviewPaneButtons_Container: { get: function() { return this.reviewPane_Container.element('.submitOptions'); } },
+      reviewPaneSubmit_Button: { get: function() { return this.reviewPaneButtons_Container.element('[ng-click="submitPriceChanges()"]'); } },
+      reviewPaneReject_Button: { get: function() { return this.reviewPaneButtons_Container.element('[ng-click="deletePriceChanges()"]'); } },
 });
 
 module.exports = ReviewPanePage;

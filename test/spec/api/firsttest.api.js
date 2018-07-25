@@ -13,7 +13,7 @@ chai.use(chaiWebdriver(browser));
 //const HomePage = require('../pageobjects/home.page');
 //const userData = require('../data/user.data');
 
-suite('API Test Suite', () => {
+suite.skip('API Test Suite', () => {
 
   test('A_Test an API call', () => {
     chai.request('https://google.com')

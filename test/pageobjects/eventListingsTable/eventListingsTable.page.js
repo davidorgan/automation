@@ -39,10 +39,15 @@ var EventListingsTablePage = Object.create(Page, {
   //Listings Table:
   listingsTable_Div: { get: function() { return browser.element(".homePageListingsList");}},
     // Elements inside listingsTable_Div //
-    listingsTableCheckboxCol_Span: { get: function() { return this.listingsTable_Div.elements('.listingCheckbox');}},
+    //listingsTableCheckboxCol_Span: { get: function() { return this.listingsTable_Div.elements('.listingCheckbox');}},
     listingsTableSharedCol_Span: { get: function() { return this.listingsTable_Div.elements('[ng-if="listing.shared"]');}},
     listingsTableUnSharedCol_Span: { get: function() { return this.listingsTable_Div.elements('[ng-if="!listing.shared"]');}},
+
     listingHasReseller_Row: { get: function() { return this.listingsTable_Div.elements('[iscurrentreseller="true"]');}},
+      homePageListingPrice: { get: function() { return this.listingHasReseller_Row.element('.homePageListingPrice');}},
+      listingsTableCheckboxCol_TD: { get: function() { return this.listingHasReseller_Row.element('td.listingCheckbox');}},
+        listingsTableCheckboxCol_Input: { get: function() { return this.listingsTableCheckboxCol_TD.element('input.listingCheckbox');}},
+      
     listingNotReseller_Row: { get: function() { return this.listingsTable_Div.elements('[iscurrentreseller="false"]');}}, 
     // ENDOF --> Elements inside listingsTable_Div //
 

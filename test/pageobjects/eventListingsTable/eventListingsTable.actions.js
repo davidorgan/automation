@@ -133,7 +133,7 @@ var EventListingsTableActions = Object.create(Page, {
         newPriceRes: newPrice
       };
       param = listingRowNum + 1;
-      this.firstListingEditPrice_Span.waitForVisible(HomePage.defaultWait);
+      ListingsTablePage.firstListingEditPrice_Span.waitForVisible(HomePage.defaultWait);
       //Add option here later to choose which row to edit listing price for. Using listingRowNum
 
       currentPrice = HomePage.firstListingEditPrice_Span.getText();
@@ -141,12 +141,12 @@ var EventListingsTableActions = Object.create(Page, {
       newPrice = parseInt(newPrice, 10);
       newPrice = newPrice + priceChange;
 
-      this.firstListingEditPrice_Span.waitForVisible(HomePage.defaultWait);
-      this.firstListingEditPrice_Span.moveToObject();
+      ListingsTablePage.firstListingEditPrice_Span.waitForVisible(HomePage.defaultWait);
+      ListingsTablePage.firstListingEditPrice_Span.moveToObject();
 
-      this.firstListingEditPrice_iLink.waitForVisible(HomePage.defaultWait);
-      this.firstListingEditPrice_iLink.click();
-      this.firstListingEditPrice_Input.setValue(newPrice);
+      ListingsTablePage.firstListingEditPrice_iLink.waitForVisible(HomePage.defaultWait);
+      ListingsTablePage.firstListingEditPrice_iLink.click();
+      ListingsTablePage.firstListingEditPrice_Input.setValue(newPrice);
       //browser.keys('\uE007');//This presses Enter on page to submit price change
       HomePage.pressEnter();
 

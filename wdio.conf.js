@@ -60,7 +60,7 @@ exports.config = {
           './test/spec/QAT-40_ReviewPane_SubmitPrices.js'
         ],
         priceChangesReject: [
-          './test/spec/PriceChanges_Reject.js'
+          './test/spec/QAT-41_Review pane - Reject checked prices.js'
         ],
         switchEvents:[
             './test/spec/QAT-405_Switch between Events.js'
@@ -151,8 +151,8 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    //baseUrl: userData.devURL,
-    baseUrl: userData.qaURL,
+    baseUrl: userData.devURL,
+    //baseUrl: userData.qaURL,
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
