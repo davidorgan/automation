@@ -39,14 +39,33 @@ var EventListingsTablePage = Object.create(Page, {
   //Listings Table:
   listingsTable_Div: { get: function() { return browser.element(".homePageListingsList");}},
     // Elements inside listingsTable_Div //
-    //listingsTableCheckboxCol_Span: { get: function() { return this.listingsTable_Div.elements('.listingCheckbox');}},
     listingsTableSharedCol_Span: { get: function() { return this.listingsTable_Div.elements('[ng-if="listing.shared"]');}},
     listingsTableUnSharedCol_Span: { get: function() { return this.listingsTable_Div.elements('[ng-if="!listing.shared"]');}},
 
     listingHasReseller_Row: { get: function() { return this.listingsTable_Div.elements('[iscurrentreseller="true"]');}},
-      homePageListingPrice: { get: function() { return this.listingHasReseller_Row.element('.homePageListingPrice');}},
-      listingsTableCheckboxCol_TD: { get: function() { return this.listingHasReseller_Row.element('td.listingCheckbox');}},
-        listingsTableCheckboxCol_Input: { get: function() { return this.listingsTableCheckboxCol_TD.element('input.listingCheckbox');}},
+    
+      homePageListingSwatchContainer_TD: { get: function() { return this.listingHasReseller_Row.element('.homePageListingSwatchContainer');}},
+      listingsTableCheckboxCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[2]');}},
+        listingsTableCheckboxCol_Input: { get: function() { return this.listingsTableCheckboxCol_TD.element('./input');}},
+      listingsTableShareCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[3]');}},
+      listingsTableSectionCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[4]');}},
+      listingsTableRowCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[5]');}},
+      listingsTableQuantityCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[6]');}},
+      listingsTableCostCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[7]');}},
+      listingsTablePriceCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[8]');}},
+        listingsTableEditPriceCol_Span: { get: function() { return this.listingsTablePriceCol_TD.element('./div/span[@class="homePagePriceIsEditable"}');}},
+        listingsTableViewPriceCol_Span: { get: function() { return this.listingsTablePriceCol_TD.element('./div/span[@class="homePageListingPriceView"}');}},
+        listingsTablePriceColToolbar_Ul: { get: function() { return this.listingsTablePriceCol_TD.element('.homePageListingPriceToolbar');}},
+          listingsTablePriceColToolbarEdit_i: { get: function() { return this.listingsTablePriceColToolbar_Ul.element('.glyphicon-pencil');}},
+      listingsTableContextCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[9]');}},
+        listingsTableContextIcon_i: { get: function() { return this.listingsTableContextCol_TD.element('./i');}},
+      listingsTableChangeCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[10]');}},
+      listingsTableROICol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[11]');}},
+      listingsTableAgeCol_TD: { get: function() { return this.listingHasReseller_Row.element('./td[12]');}},
+        
+
+
+
       
     listingNotReseller_Row: { get: function() { return this.listingsTable_Div.elements('[iscurrentreseller="false"]');}}, 
     // ENDOF --> Elements inside listingsTable_Div //
