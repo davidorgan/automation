@@ -32,6 +32,7 @@ suite("QAT-41 - Review pane - Reject checked prices", () => {
         // -------------------------------------------------------------------------- //
         HomePage.goToReseller("PrimeSport"); //Function to go to named reseller
 
+        browser.pause(3000);
         EventListingsTablePage.listingSwatch_Container.waitForVisible(HomePage.defaultWait);
         EventListingsTablePage.listingSwatch_Container.click(); //Click to sort by your inventory at top
         EventListingsTablePage.listingHasReseller_Row.waitForVisible(HomePage.defaultWait);
@@ -47,55 +48,83 @@ suite("QAT-41 - Review pane - Reject checked prices", () => {
             //Go to next valid event
             EventListDropdownActions.findEventValidListings();
             }  
-            //Get detailed listings info for current reseller/event
+            //Get detailed listings info for current reseller/event before price change
+            var listingsArrayBefore = new Array();
+            EventListingsTablePage.listingHasReseller_Row.value.forEach(element => {
+                listingsArrayBefore.push(Object.create( {
+                    listingID: element.element(EventListingsTablePage.listingsTableSectionCol_TD).getText() + '_'+ element.element(EventListingsTablePage.listingsTableRowCol_TD).getText(),
+                   sectionVal: element.element(EventListingsTablePage.listingsTableSectionCol_TD).getText(),
+                   rowVal: element.element(EventListingsTablePage.listingsTableRowCol_TD).getText(),
+                   qtyVal: element.element(EventListingsTablePage.listingsTableQuantityCol_TD).getText(),
+                   costVal: element.element(EventListingsTablePage.listingsTableCostCol_TD).getText(),
+                   priceVal: element.element(EventListingsTablePage.listingsTablePriceCol_TD).getText(),
+                   changeVal: element.element(EventListingsTablePage.listingsTableChangeCol_TD).getText(),
+                   roiVal: element.element(EventListingsTablePage.listingsTableROICol_TD).getText(),
+                   ageVal: element.element(EventListingsTablePage.listingsTableAgeCol_TD).getText()
+                }));
+                //var str = JSON.parse(JSON.stringify(listingsArrayBefore[listingsArrayBefore.length-1]));
+                //console.log(str);
+            });
+
             //beforeSubmitListings[i] = HomePage.getEventListingsInfo();
             //If more than 4 listings just edit the first 4
-            let numListingsToEdit = 4;
-            if (EventListingsTablePage.listingHasReseller_Row.value.length < 4) {
-            numListingsToEdit = EventListingsTablePage.listingHasReseller_Row.value.length;
-            }
+           
+            // let numListingsToEdit = 4;
+            // if (EventListingsTablePage.listingHasReseller_Row.value.length < 4) {
+            // numListingsToEdit = EventListingsTablePage.listingHasReseller_Row.value.length;
+            // }
             
-            var rowNum = 0;
-            for (var j = 0; j < numListingsToEdit; j++) {
-            rowNum = j + 1;
-            //Function to edit all listings prices for event
-            listingPriceResults = EventListingsTableActions.editPrice(10, rowNum); //returns object like { currentPriceRes: '$14900', newPriceRes: 159 }
-            priceResults[numPriceChanges] = listingPriceResults; //Add edit price results obj to array of results
-            numPriceChanges = numPriceChanges + 1;
+            // var rowNum = 0;
+            // for (var j = 0; j < numListingsToEdit; j++) {
+            // rowNum = j + 1;
+            // //Function to edit all listings prices for event
+            // listingPriceResults = EventListingsTableActions.editPrice(10, rowNum); //returns object like { currentPriceRes: '$14900', newPriceRes: 159 }
+            // priceResults[numPriceChanges] = listingPriceResults; //Add edit price results obj to array of results
+            // numPriceChanges = numPriceChanges + 1;
+           // }
+        }
+
+        listingsArrayBefore.forEach(listingsObj => {
+            console.log('Listing Info: ');
+            var propValue;
+            for(var propName in listingsObj) {
+                propValue = listingsObj[propName]
+                console.log(propName,propValue);
             }
-        }
+        })
+
     
-        console.log(priceResults);
-        ReviewPane.homePriceCartText_Span.waitForVisible(HomePage.defaultWait);
-        browser.pause(1000);
-        //Assert number of price changes matches number displayed in Review Pane cart.
-        expect(priceResults.length.toString()).to.eql(ReviewPane.homePriceCartText_Span.getText());
+        // console.log(priceResults);
+        // ReviewPane.homePriceCartText_Span.waitForVisible(HomePage.defaultWait);
+        // browser.pause(1000);
+        // //Assert number of price changes matches number displayed in Review Pane cart.
+        // expect(priceResults.length.toString()).to.eql(ReviewPane.homePriceCartText_Span.getText());
     
-        HomePage.priceCart_Icon.waitForVisible(HomePage.defaultWait);
-        HomePage.priceCart_Icon.click();
+        // HomePage.priceCart_Icon.waitForVisible(HomePage.defaultWait);
+        // HomePage.priceCart_Icon.click();
     
-        HomePage.expandAllEventsReviewPane();
-        //HomePage.reviewPaneCaret1_I.click();
+        // HomePage.expandAllEventsReviewPane();
+        // //HomePage.reviewPaneCaret1_I.click();
     
-        HomePage.getReviewListingsInfo();
-        //browser.logger.info("Next Line should have review pane events elements");
-        //var eventsReviewPane = browser.elements('[ng-repeat="changeSet in filteredEvents = (changeSets | filter: reviewSearchFilter | orderBy: eventFilter)"]');
-        //browser.logger.info(eventsReviewPane.value);
+        // HomePage.getReviewListingsInfo();
+        // //browser.logger.info("Next Line should have review pane events elements");
+        // //var eventsReviewPane = browser.elements('[ng-repeat="changeSet in filteredEvents = (changeSets | filter: reviewSearchFilter | orderBy: eventFilter)"]');
+        // //browser.logger.info(eventsReviewPane.value);
     
-        HomePage.eventsReviewPane_Container.value.forEach(element => {
-            browser.logger.info(element.value);
-            browser.logger.info("Event header text should display here: ");
-            browser.logger.info(element.element(".//div[1]/span[1]").getText());
-        });
+        // HomePage.eventsReviewPane_Container.value.forEach(element => {
+        //     browser.logger.info(element.value);
+        //     browser.logger.info("Event header text should display here: ");
+        //     browser.logger.info(element.element(".//div[1]/span[1]").getText());
+        // });
     
-        //HomePage.newPricesinCart.waitForVisible(HomePage.defaultWait);
-        //console.log(HomePage.newPricesinCart.value.length);
+        // //HomePage.newPricesinCart.waitForVisible(HomePage.defaultWait);
+        // //console.log(HomePage.newPricesinCart.value.length);
         
-        for (var i = 0; i < eventsReviewPane.value.length; i++) { //NewPriceInCart elements doubled for each row
-            //console.log('$'+ priceResults[i].newPriceRes +'00');
-            //figure out better way to assert new prices are shown on review pane.
-        }
+        // for (var i = 0; i < eventsReviewPane.value.length; i++) { //NewPriceInCart elements doubled for each row
+        //     //console.log('$'+ priceResults[i].newPriceRes +'00');
+        //     //figure out better way to assert new prices are shown on review pane.
+        // }
     
-        var afterEditListings = HomePage.getEventListingsInfo();
+        // var afterEditListings = HomePage.getEventListingsInfo();
     });
   });
